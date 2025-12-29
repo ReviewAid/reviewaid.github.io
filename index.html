@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
  <meta name="google-site-verification" content="" />
  
@@ -15,7 +15,7 @@
   <link rel="canonical" href="https://aurumz-rgb.github.io/ReviewAid/">
   <link rel="icon" href="favicon.ico" type="image/png">
   
-  <meta name="theme-color" content="#09090b">
+  <meta name="theme-color" content="#1f2937">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="ReviewAid | AI-Driven Full-Text Screening & Extraction">
@@ -84,96 +84,7 @@
     ]
   }
   </script>
-  
-  <style>
-    :root {
-     
-      --bg-body: #09090b;
-      --bg-card: #18181b;
-      --bg-card-hover: #27272a;
-      --bg-accent: #0c1929;
-      
-      --text-primary: #f4f4f5;
-      --text-secondary: #a1a1aa;
-      --text-muted: #71717a;
-      
-      --border-color: #27272a;
-      --border-highlight: #3f3f46;
-      
-      --primary: #4189DC; 
-      --primary-glow: rgba(65, 137, 220, 0.25);
-      --primary-hover: #5da9ea;
-      
-      --success: #10b981;
-      --warning: #f59e0b;
-      --danger: #ef4444;
-      
-      --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
-    }
-
-    
-    [data-theme="light"] {
-      --bg-body: #f8fafc;
-      --bg-card: #ffffff;
-      --bg-card-hover: #f1f5f9;
-      --bg-accent: #eff6ff;
-      
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
-      --text-muted: #64748b;
-      
-      --border-color: #e2e8f0;
-      --border-highlight: #cbd5e1;
-      
-      --primary: #2563eb; 
-      --primary-glow: rgba(37, 99, 235, 0.2);
-      --primary-hover: #1d4ed8;
-      
-      --success: #16a34a;
-      --warning: #d97706;
-      --danger: #dc2626;
-    }
-
-    
-    [data-theme="light"] body {
-       background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-    }
-
-
-
-    [data-theme="light"] .motivation {
-      background: rgba(37, 99, 235, 0.05);
-      border-color: rgba(37, 99, 235, 0.2);
-    }
-    
-
-    [data-theme="light"] .disclaimer-note {
-      background: rgba(245, 158, 11, 0.05);
-      border-color: rgba(245, 158, 11, 0.2);
-    }
-    
-
-    [data-theme="light"] .motivation[style*="#10b981"] {
-      background: rgba(22, 163, 74, 0.05);
-      border-color: rgba(22, 163, 74, 0.2);
-    }
-
-   
-    [data-theme="light"] .motivation[style*="#10b981"] h3 {
-      color: #000000 !important;
-    }
-
-
-    [data-theme="light"] .confidence-table th {
-      background-color: #f1f5f9;
-    }
-    [data-theme="light"] .confidence-table tr:hover td {
-      background-color: #f8fafc;
-    }
-
+    <style>
     * {
       margin: 0;
       padding: 0;
@@ -184,265 +95,278 @@
       scroll-behavior: smooth;
     }
     
-    body {
-      font-family: var(--font-main);
-      line-height: 1.7;
-      color: var(--text-primary);
-      background-color: var(--bg-body);
-     
-      background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
-      overflow-x: hidden;
-      transition: background-color 0.3s, color 0.3s;
+    :root {
+  
+      --bg-body: #f8f9fa;
+      --bg-surface: #ffffff;
+      --bg-surface-alt: #f9fafb;
+      --bg-header: linear-gradient(135deg, #0c1117 0%, #111827 100%);
+      --bg-footer: #1f2937;
+      
+      --text-main: #333333;
+      --text-heading: #1f2937;
+      --text-secondary: #4b5563;
+      --text-muted: #6b7280;
+      --text-inverted: #ffffff;
+      
+      --border-color: #e5e7eb;
+      --border-focus: #cbd5e1;
+      
+      --accent-primary: #4189DC;
+      --accent-primary-dark: #2b6cb0;
+      --accent-secondary: #174D8B;
+      --accent-secondary-dark: #0f3560;
+      
+      --highlight-bg: #ebf8ff;
+      --motivation-bg: #f0f9ff;
+      --motivation-border: #4189DC;
+      
+      --warning-bg: #fff7ed;
+      --warning-text: #c2410c;
+      
+      --code-bg: #ffffff;
+      --code-text: #334155;
+
+      --scrollbar-track: #f1f1f1;
+      --scrollbar-thumb: #cbd5e1;
+      --scrollbar-thumb-hover: #64748b;
     }
 
-    
-    ::-webkit-scrollbar {
-      width: 10px;
+    body.dark-mode {
+      
+      --bg-body: #0f172a; 
+      --bg-surface: #1e293b; 
+      --bg-surface-alt: #111827; 
+      --bg-header: #020617; 
+      --bg-footer: #020617;
+      
+      --text-main: #f1f5f9; 
+      --text-heading: #ffffff;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8; 
+      --text-inverted: #e2e8f0;
+      
+      --border-color: #334155; 
+      --border-focus: #475569;
+      
+      --accent-primary: #4189DC; 
+      --accent-primary-dark: #60a5fa;
+      --accent-secondary: #1e3a8a;
+      --accent-secondary-dark: #1e40af;
+      
+      --highlight-bg: rgba(65, 137, 220, 0.1); 
+      --motivation-bg: rgba(65, 137, 220, 0.15);
+      --motivation-border: #60a5fa;
+      
+      --warning-bg: rgba(194, 65, 12, 0.1);
+      --warning-text: #fdba74;
+      
+      --code-bg: #0f172a;
+      --code-text: #e2e8f0;
+
+      --scrollbar-track: #0f172a;
+      --scrollbar-thumb: #475569;
+      --scrollbar-thumb-hover: #94a3b8;
     }
-    ::-webkit-scrollbar-track {
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text-main);
       background: var(--bg-body);
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
+
+    ::-webkit-scrollbar {
+      width: 14px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--scrollbar-track);
+    }
+    
     ::-webkit-scrollbar-thumb {
-      background: var(--border-color);
-      border-radius: 5px;
-      border: 2px solid var(--bg-body);
+      background: var(--scrollbar-thumb);
+      border-radius: 6px;
+      border: 3px solid var(--scrollbar-track); 
     }
+    
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--text-muted);
+      background: var(--scrollbar-thumb-hover); 
+      border: 3px solid var(--scrollbar-track);
     }
+    
+  
+    ::-webkit-scrollbar-thumb:active {
+      background: var(--accent-primary) !important; 
+      border: 3px solid var(--scrollbar-track) !important; 
+    }
+    
+
     html {
       scrollbar-width: thin;
-      scrollbar-color: var(--border-color) var(--bg-body);
+      scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
     }
 
-   
+
     .reveal {
       position: relative;
-      transform: translateY(30px);
+      transform: translateY(50px);
       opacity: 0;
-      transition: all 0.6s cubic-bezier(0.5, 0, 0, 1);
+      transition: all 0.8s ease-out;
     }
+
     .reveal.active {
       transform: translateY(0);
       opacity: 1;
     }
     
-  
     .header {
-      position: relative;
-      background: radial-gradient(circle at center, #0c1929 0%, #000000 100%); 
-      color: white;
-      padding: 60px 0;
+      background: var(--bg-header);
+      color: var(--text-inverted);
+      padding: 40px 0;
       text-align: center;
-      border-bottom: 1px solid var(--border-color);
-      overflow: hidden;
-      transition: background 0.3s;
-    }
-    
-    .header::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
-      opacity: 0.4;
-      pointer-events: none;
-      z-index: 0;
+      border-bottom: 5px solid var(--accent-primary);
+      position: relative; 
     }
 
+   
+    #theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0);
+      border: 1px solid rgba(255, 255, 255, 0);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 30%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    #theme-toggle:hover {
+    
+      transform: scale(1.1);
+    }
+
+    #theme-toggle svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+    
     .header-content {
-      position: relative;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
-      z-index: 1;
     }
     
     h1 {
-      font-size: 4rem;
-      margin-bottom: 15px;
-      font-weight: 800;
-      letter-spacing: -0.05em;
-      background: linear-gradient(to right, #fff, #a5d8ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1.1;
-      transition: background 0.3s;
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
     }
     
     .tagline {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       margin-bottom: 30px;
-      color: var(--text-secondary);
-      font-weight: 400;
+      color: #e2e8f0;
+      font-weight: 300;
     }
 
     .banner-img {
-      width: 100%;
-      max-width: 1000px; 
-      height: auto;
-      margin: 30px auto;
-      display: block;
-  
+        width: 100%;
+        max-width: 1200px; 
+        height: auto;
+        border-radius: 12px;
+        margin: 20px auto;
+        display: block;
     }
     
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 30px;
-      padding: 20px;
- 
-    }
     
-    .badges img {
-      height: 24px;
-      filter: grayscale(0.7);
-      transition: filter 0.2s;
-    }
-    .badges img:hover {
-      filter: grayscale(0);
-    }
     
     .main-content {
-      padding: 60px 0 100px;
+      background: var(--bg-body);
+      padding: 40px 0;
     }
     
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
     }
     
     .section {
-      margin-bottom: 80px;
+      margin-bottom: 50px;
     }
     
     h2 {
-      font-size: 2.5rem;
-      color: var(--text-primary);
-      margin-bottom: 30px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      display: flex;
-      align-items: center;
+      font-size: 2.2rem;
+      color: var(--text-heading);
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid var(--accent-primary);
     }
-    h2::after {
-      content: '';
-      display: block;
-      flex: 1;
-      height: 1px;
-      background: var(--border-color);
-      margin-left: 20px;
-      opacity: 0.5;
-    }
-
+    
     h3 {
-      font-size: 1.5rem;
-      color: var(--text-primary);
+      font-size: 1.4rem;
+      color: var(--text-heading);
       margin-bottom: 15px;
-      font-weight: 600;
-      margin-top: 25px;
+      margin-top: 10px;
     }
     
     p {
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       color: var(--text-secondary);
-      font-size: 1.05rem;
-    }
-
-    strong {
-      color: var(--text-primary);
-      font-weight: 600;
-    }
-
-    code {
-      background: rgba(255,255,255,0.1);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: var(--font-mono);
-      font-size: 0.9em;
-      color: #e2e8f0;
+      font-size: 1.1rem;
     }
     
-    [data-theme="light"] code {
-      background: rgba(0,0,0,0.08);
-      color: #334155;
-    }
-
-  
     .main-links {
       text-align: center;
-      margin: 60px 0;
+      margin: 40px 0;
     }
     
     .main-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      display: inline-block;
       color: white;
-      padding: 16px 32px;
+      padding: 15px 30px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      margin: 10px;
+      margin: 8px;
       transition: all 0.3s ease;
-      font-size: 1rem;
-      border: 1px solid transparent;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(65, 137, 220, 0.3);
     }
+    
     
     .main-links a:not(.primary) {
-      background: rgba(255,255,255,0.05);
-      border-color: var(--border-color);
-      color: var(--text-primary);
-    }
-    
-    [data-theme="light"] .main-links a:not(.primary) {
-      background: rgba(0,0,0,0.03);
-      border-color: var(--border-color);
-      color: var(--text-primary);
+      background: var(--accent-secondary);
     }
     
     .main-links a:not(.primary):hover {
-      background: rgba(255,255,255,0.1);
+      background: var(--accent-secondary-dark);
+      transform: translateY(-3px);
     }
-
-    [data-theme="light"] .main-links a:not(.primary):hover {
-      background: rgba(0,0,0,0.06);
-      border-color: var(--text-muted);
-    }
+    
  
     .main-links a.primary {
-      background: var(--primary);
-      box-shadow: 0 0 20px var(--primary-glow);
+      background: var(--accent-primary);
     }
     
     .main-links a.primary:hover {
-      background: var(--primary-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 0 30px var(--primary-glow);
-    }
-
-
-    .launch-btn {
-      background-color: #0970e5; 
-      color: white;
-    }
-
-    .launch-btn:hover {
-      background-color: #044b76; 
-      transform: translateY(-2px);
-      box-shadow: 0 0 30px rgba(9, 115, 229, 0.4);
+      background: var(--accent-primary-dark); 
+      transform: translateY(-3px);
     }
     
-   
     .tools {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -451,61 +375,57 @@
     }
     
     .tool {
-      background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 25px;
-      text-align: left; 
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      background: var(--bg-surface-alt);
       transition: all 0.3s ease;
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
     }
     
     .tool:hover {
       transform: translateY(-5px);
-      border-color: var(--primary);
-      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-color: var(--accent-primary);
     }
     
     .tool h4 {
-      color: var(--text-primary);
+      color: var(--text-heading);
       margin-bottom: 10px;
-      font-size: 1.15rem;
-      margin-top: 0;
+      font-size: 1.2rem;
     }
     
     .tool p {
       color: var(--text-secondary);
       margin-bottom: 0;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
-
-  
+    
     .highlight-section {
-      background: linear-gradient(145deg, rgba(24, 24, 27, 0.5), rgba(0,0,0,0));
+      background: var(--highlight-bg);
       padding: 40px;
-      border-radius: 16px;
+      border-radius: 10px;
       margin-bottom: 50px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       border: 1px solid var(--border-color);
-      transition: background 0.3s;
-    }
-
-    [data-theme="light"] .highlight-section {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.5), rgba(0,0,0,0));
     }
     
     .highlight-section h2 {
-      border-bottom: none;
+      color: var(--text-heading);
+      border-bottom: 3px solid var(--accent-primary);
     }
     
-
+   
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      margin: 30px 0;
+      display: flex;
+      flex-direction: column; 
+      gap: 50px; 
+      max-width: 1000px;
+      margin: 30px auto;
     }
     
     .gallery-item {
@@ -513,108 +433,94 @@
       border-radius: 12px;
       overflow: hidden;
       transition: all 0.3s ease;
-      background: var(--bg-card);
+      background: var(--bg-surface);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
     }
     
     .gallery-item:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.6);
-      border-color: var(--border-highlight);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
     
-    .gallery-item img {
+    
+    .gallery-item video {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
+      height: auto;
+      aspect-ratio: 16 / 9; 
+      object-fit: contain;
       display: block;
-      border-bottom: 1px solid var(--border-color);
+      background-color: #000;
     }
     
+ 
     .gallery-item .caption {
-      padding: 15px;
+      padding: 20px;
       text-align: center;
-      color: var(--text-secondary);
-      font-weight: 500;
-      background: rgba(0,0,0,0.2);
+      color: var(--text-heading);
+      font-weight: 700;
+      font-size: 1.2rem;
+      background: var(--bg-surface-alt);
+      border-top: 1px solid var(--border-color);
     }
 
-    [data-theme="light"] .gallery-item .caption {
-      background: rgba(0,0,0,0.03);
-    }
 
-    
     .confidence-overview-list {
       list-style-type: none;
-      padding-left: 0;
+      padding-left: 10px;
     }
     
     .confidence-overview-list li {
       position: relative;
       padding-left: 25px;
-      margin-bottom: 12px;
-      color: var(--text-secondary);
+      margin-bottom: 10px;
     }
     
     .confidence-overview-list li::before {
-      content: "→";
-      color: var(--primary);
+      content: "•";
+      color: var(--accent-primary);
       font-weight: bold;
       position: absolute;
       left: 0;
+      font-size: 1.2em;
     }
 
- 
     .tiers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin: 40px 0;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+      margin: 30px 0;
     }
 
     .tier-card {
-      background: var(--bg-card);
+      background: var(--bg-surface);
       border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 30px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-top: 5px solid var(--accent-primary);
     }
-
-    .tier-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: var(--border-color);
-    }
-    
-   
-    .tier-card[style*="#ef4444"]::before { background: #ef4444; } 
-    .tier-card[style*="#4189DC"]::before { background: #4189DC; } 
-    .tier-card[style*="#16a34a"]::before { background: #16a34a; } 
 
     .tier-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--border-highlight);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
 
     .tier-card h3 {
       margin-top: 0;
-      font-size: 1.35rem;
-      color: var(--text-primary);
+      font-size: 1.25rem;
+      color: var(--text-heading);
     }
 
     .tier-card h4 {
-      font-size: 0.85rem;
+      font-size: 1rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
       color: var(--text-muted);
-      margin-bottom: 15px;
-      margin-top: 10px;
+      margin-bottom: 8px;
+      margin-top: 15px;
     }
 
     .tier-card p {
@@ -626,124 +532,89 @@
     .tier-card ul {
       list-style-type: disc;
       padding-left: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: var(--text-secondary);
       font-size: 0.95rem;
     }
     
     .tier-card ul li {
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
-    
+
     .table-responsive {
       overflow-x: auto;
-      margin-top: 30px;
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
 
     .confidence-table {
       width: 100%;
       border-collapse: collapse;
-      background: var(--bg-card);
+      background: var(--bg-surface);
       min-width: 600px; 
     }
 
     .confidence-table th, 
     .confidence-table td {
-      padding: 18px 24px;
+      padding: 16px;
       text-align: left;
       border-bottom: 1px solid var(--border-color);
     }
 
     .confidence-table th {
-      background-color: #0f0f11;
-      color: var(--text-muted);
+      background-color: #1f2937; 
+      color: white;
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+    }
+    
+    
+    body.dark-mode .confidence-table th {
+      background-color: #0f172a;
+      border-bottom: 1px solid var(--accent-primary);
     }
 
-    .confidence-table tr:last-child td {
-      border-bottom: none;
+    .confidence-table tr:nth-child(even) {
+      background-color: var(--bg-surface-alt);
     }
 
-    .confidence-table tr:hover td {
-      background-color: rgba(255,255,255,0.02);
+    .confidence-table tr:hover {
+      background-color: rgba(65, 137, 220, 0.1);
     }
 
     .confidence-table td:first-child {
       font-weight: 600;
-      color: var(--text-primary);
-      font-family: var(--font-mono);
-      font-size: 0.9em;
+      color: var(--text-heading);
     }
 
     .confidence-badge {
       display: inline-block;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      background: rgba(255,255,255,0.05);
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #e5e7eb;
+      color: #374151;
     }
-
-    [data-theme="light"] .confidence-badge {
-      background: rgba(0,0,0,0.05);
+    
+    body.dark-mode .confidence-badge {
+       background: #334155;
+       color: #f1f5f9;
     }
 
     .rationale {
       font-style: italic;
       color: var(--text-muted);
       font-size: 0.9rem;
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-color);
     }
 
-    [data-theme="light"] .rationale {
-      border-top: 1px solid rgba(0,0,0,0.1);
-    }
 
-   
-    .motivation {
-      background: rgba(24, 40, 75, 0.2); 
-      padding: 30px;
-      border-radius: 12px;
-      margin: 30px 0;
-      border-left: 4px solid var(--primary);
-      font-style: normal;
-      color: var(--text-secondary);
-      border: 1px solid rgba(65, 137, 220, 0.2);
-      transition: background 0.3s;
-    }
-    .motivation h3 { color: var(--text-primary); margin-top: 0; }
-
-    .disclaimer-note {
-      background: rgba(245, 158, 11, 0.1); 
-      padding: 30px;
-      border-radius: 12px;
-      margin: 30px 0;
-      border-left: 4px solid var(--warning);
-      color: var(--text-secondary);
-      font-size: 1rem;
-      border: 1px solid rgba(245, 158, 11, 0.2);
-      transition: background 0.3s;
-    }
-
-    .disclaimer-note strong {
-      color: var(--warning);
-      display: block;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-size: 0.85rem;
-    }
 
     .acknowledgement-content {
       display: flex;
@@ -753,42 +624,107 @@
     }
 
     .ack-img {
-      max-width: 300px;
+      max-width: 350px;
       height: auto;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       border-radius: 8px;
-      border: 1px solid var(--border-color);
-      background: var(--bg-card);
     }
 
     .ack-text p {
       margin: 0 0 15px 0;
       max-width: 100%;
     }
-    
+
     .ack-text strong {
-      color: var(--primary);
-    }
-    .ack-text a {
-      color: var(--primary-hover);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .ack-text a:hover {
-      text-decoration: underline;
-    }
-    
-    
-    footer {
-      background: #000;
-      color: var(--text-muted);
-      padding: 40px 0;
-      border-top: 1px solid var(--border-color);
-      transition: background 0.3s;
+      color: var(--accent-primary);
     }
 
-    [data-theme="light"] footer {
-      background: #ffffff;
+    .citation-section {
+
+
+  
+    }
+
+    .citation-controls {
+      margin-bottom: 20px;
+    }
+
+    .citation-select {
+      padding: 12px 16px;
+      font-size: 1rem;
+      border: 1px solid var(--border-focus);
+      border-radius: 8px;
+      background-color: var(--bg-surface);
+      color: var(--text-heading);
+      outline: none;
+      width: 100%;
+      max-width: 300px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .citation-select:focus {
+      box-shadow: 0 0 0 3px rgba(65, 137, 220, 0.1);
+    }
+
+    .citation-box {
+      background: var(--code-bg);
+      border: 1px solid var(--border-focus);
+      padding: 20px;
+      border-radius: 6px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      color: var(--code-text);
+      margin-bottom: 20px;
+      position: relative;
+      line-height: 1.8;
+    }
+
+    .citation-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-surface-alt);
+      color: var(--text-heading);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--border-color);
+      transform: translateY(-1px);
+    }
+    
+    footer {
+      background: var(--bg-footer);
+      color: var(--text-inverted);
+      padding: 20px 0;
+      margin-top: 0;
     }
     
     .footer-content {
@@ -800,175 +736,245 @@
       align-items: center;
     }
     
+    .footer-left {
+      text-align: left;
+      flex: 1;
+    }
+    
+    .footer-center {
+      text-align: center;
+      flex: 1;
+    }
+    
+    .footer-right {
+      text-align: right;
+      flex: 1;
+    }
+    
     footer p {
-      color: var(--text-muted);
+      color: #e5e7eb;
       margin-bottom: 0;
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
     
     footer a {
-      color: var(--text-primary);
+      color: #ffffff;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.2s;
+      transition: all 0.3s ease;
     }
     
     footer a:hover {
-      color: var(--primary);
+      color: #e2e8f0;
+      text-decoration: underline;
+    }
+    
+    .heart {
+      color: #e53e3e;
+    }
+    
+    .maroon {
+      color: #e14242;
+    }
+    
+    .motivation {
+      background: var(--motivation-bg);
+      padding: 25px;
+      border-radius: 10px;
+      margin: 25px 0;
+      border-left: 5px solid var(--motivation-border);
+      font-style: italic;
+      color: var(--text-secondary);
     }
 
 
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: var(--bg-card);
-      color: var(--text-primary);
-      border: 1px solid var(--border-color);
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .disclaimer-note {
+      background: var(--warning-bg); 
+      padding: 25px;
+      border-radius: 10px;
+      margin: 25px 0;
+      border: 1px solid rgba(194, 65, 12, 0.2);
+      color: var(--text-secondary);
+      font-size: 1.05rem;
     }
 
-    .theme-toggle:hover {
-      transform: scale(1.1);
-      border-color: var(--primary);
-      box-shadow: 0 0 15px var(--primary-glow);
+    .disclaimer-note strong {
+      color: var(--warning-text); 
+      display: block;
+      margin-bottom: 5px;
     }
+    
+ 
+    body:not(.dark-mode) .moon-icon { display: none; }
+    body.dark-mode .sun-icon { display: none; }
 
-    .theme-toggle svg {
-      width: 20px;
-      height: 20px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-
-    [data-theme="dark"] .icon-sun { display: none; }
-    [data-theme="light"] .icon-moon { display: none; }
-
-
+    
     @media (max-width: 900px) {
-      h1 { font-size: 2.8rem; }
-      .tools { grid-template-columns: 1fr 1fr; }
-      .tiers-grid { grid-template-columns: 1fr; }
-      .gallery { grid-template-columns: 1fr; }
-      .ack-img { max-width: 250px; }
+      h1 {
+        font-size: 3rem;
+      }
+      .tools {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .gallery {
+        max-width: 100%;
+      }
+   
+      .ack-img {
+        max-width: 300px;
+      }
+      
+      .tiers-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
-      .header { padding: 40px 0; }
-      h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.8rem; }
-      .tools { grid-template-columns: 1fr; }
-      .badges { padding: 15px; gap: 8px; }
-      .badges img { height: 20px; }
-      .footer-content { flex-direction: column; gap: 20px; text-align: center; }
-      .ack-img { max-width: 200px; }
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .tagline {
+        font-size: 1.2rem;
+      }
+      
+      
+      
+      .tools {
+        grid-template-columns: 1fr;
+      }
+      
+      .header {
+        padding: 30px 0;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      
+      .footer-left, .footer-center, .footer-right {
+        text-align: center;
+      }
+
+      #theme-toggle {
+        top: 15px;
+        right: 15px;
+      }
+
+      .ack-img {
+        max-width: 250px;
+      }
     }
 
     @media (max-width: 480px) {
-      h1 { font-size: 1.8rem; }
-      .main-links a { display: block; width: 100%; margin: 8px 0; }
-      .highlight-section { padding: 25px; }
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .banner-img {
+        border-radius: 8px;
+      }
+      
+      .main-links a {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
+      
+
+      .ack-img {
+        max-width: 200px;
+      }
     }
   </style>
 </head>
 <body>
 
-
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-  
-    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    </svg>
-
-    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </button>
-
   <div class="header">
+
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+    
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        
+   
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+
     <div class="header-content">
+      
+
       <img src="assets/RA_banner1.png" alt="ReviewAid Banner" class="banner-img">
 
-      <div class="badges">
-        <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.12%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python Version"></a>
-        <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge" alt="License"></a>
-        <a href="https://doi.org/10.5281/zenodo.18060973"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18060973.svg?style=for-the-badge" alt="DOI"></a>
-        <a href="https://github.com/aurumz-rgb/ReviewAid/releases"><img src="https://img.shields.io/github/v/release/aurumz-rgb/ReviewAid?style=for-the-badge" alt="Version"></a>
-        <a href="https://github.com/aurumz-rgb/ReviewAid/commits/main"><img src="https://img.shields.io/github/last-commit/aurumz-rgb/ReviewAid?style=for-the-badge" alt="Last Commit"></a>
-        <a href="https://github.com/aurumz-rgb/ReviewAid/issues"><img src="https://img.shields.io/github/issues-raw/aurumz-rgb/ReviewAid?style=for-the-badge" alt="GitHub Issues"></a>
-        <a href="https://github.com/aurumz-rgb/ReviewAid"><img src="https://img.shields.io/badge/uses-Streamlit-red?style=for-the-badge&logo=streamlit" alt="Uses streamlit"></a>
-        <a href="https://github.com/aurumz-rgb/ReviewAid"><img src="https://img.shields.io/badge/Repo_Size-Large-blue?style=for-the-badge" alt="Repo Size"></a>
-        <a href="https://github.com/aurumz-rgb/ReviewAid/graphs/contributors"><img src="https://img.shields.io/github/contributors/aurumz-rgb/ReviewAid?style=for-the-badge" alt="Contributors"></a>
-         <a href="https://github.com/aurumz-rgb/ReviewAid/stargazers"><img src="https://img.shields.io/github/stars/aurumz-rgb/ReviewAid?style=for-the-badge" alt="GitHub Stars"></a>
-        <a href="https://github.com/aurumz-rgb/ReviewAid/network/members"><img src="https://img.shields.io/github/forks/aurumz-rgb/ReviewAid?style=for-the-badge" alt="GitHub Forks"></a>
-        <a href="https://github.com/aurumz-rgb/ReviewAid/watchers"><img src="https://img.shields.io/github/watchers/aurumz-rgb/ReviewAid?style=for-the-badge" alt="GitHub Watchers"></a>
-
-
-
-        <a href="https://github.com/aurumz-rgb/ReviewAid"><img src="https://img.shields.io/github/commit-activity/m/aurumz-rgb/ReviewAid?style=for-the-badge" alt="Commit Activity"></a>
-
-
-        <a href="#"><img src="https://img.shields.io/badge/IDE-VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code" alt="VS Code"></a>
-        <a href="#"><img src="https://img.shields.io/badge/PDF-PyMuPDF-red?style=for-the-badge&logo=adobeacrobatreader" alt="PDF Parsing"></a>
-
-        <a href="#"><img src="https://img.shields.io/badge/JSON-parsing-success?style=for-the-badge" alt="JSON Parsing"></a>
-
-        <a href="#"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge" alt="Maintenance"></a>
-        <a href="#"><img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Status Active"></a>
-
-        <a href="#"><img src="https://img.shields.io/badge/Built%20for-Researchers-9cf?style=for-the-badge" alt="Built For Researchers"></a>
-
-        <img src="https://img.shields.io/badge/Made%20with-:)-FF69B4?style=for-the-badge" alt="Made with :)">
-      </div>
+  
     </div>
   </div>
 
   <div class="main-content">
     <div class="container">
       <div class="section reveal">
-        <h2>About</h2>
+        <h2>About ReviewAid.</h2>
         <p>
-          ReviewAid is an open-source AI-driven tool designed to streamline full-text screening and data extraction phases of systematic reviews. It leverages advanced large language models to classify papers based on PICO criteria and extract custom data fields, drastically reducing the manual workload for researchers.
+          ReviewAid is an open-source AI-driven tool designed to streamline the full-text screening and data extraction phases of systematic reviews. It leverages advanced large language models to classify papers based on PICO criteria and extract custom data fields, drastically reducing the manual workload for researchers.
         </p>
         
-        <div class="motivation">
-          <h3>Why did I make this?</h3>
-          <p>
-            I built ReviewAid to act as an assistant for Researchers especially those involved in Evidence synthesis. The idea was simple, manual work will be never be replaced but more likely will be aided by this tool. Researchers can manually do the work and then check their accuracy by such a tool so as to not miss any potential important papers. Thus, acting as an "Aid". ReviewAid.
-          </p>
-        </div>
-
-        <div class="disclaimer-note">
-          <strong>Note:</strong> 
-          Please do not replace manual done screening and data extraction completely with ReviewAid. The main aim of this tool is to use it as a 3rd person reference to minimise any errors done manually and to make the research as precise as possible.
+        <div class="section reveal">
+        <div class="gallery">
+          <div class="gallery-item">
+            <video class="preview-video" autoplay muted loop playsinline>
+              <source src="Screener.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="caption">ReviewAid Full text Screener</div>
+          </div>
+          <div class="gallery-item">
+            <video class="preview-video" autoplay muted loop playsinline>
+              <source src="Extractor.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="caption">ReviewAid Data Extractor</div>
+          </div>
         </div>
       </div>
 
+
+
+   
+      
       <div class="main-links reveal">
         <a href="https://github.com/aurumz-rgb/ReviewAid" target="_blank">GitHub Repository</a>
-        <a href="https://reviewaid.github.io" class="primary" target="_blank">Main-Website</a>
-        <a href="https://reviewaid-ai.streamlit.app" target="_blank" class="launch-btn">Launch ReviewAid</a>
+        <a href="https://reviewaid-ai.streamlit.app" class="primary" target="_blank">Launch ReviewAid</a>
       </div>
+
+      <div style="margin-top: 10px;">
+            <p>If the primary ReviewAid system is experiencing high usage, resource saturation, or memory limitations, users may utilize the available mirror versions of ReviewAid without restriction.</p>
+      </div>
+      
+      <div class="main-links reveal">
+        <a href="https://reviewaid-mirror.streamlit.app" class="primary" target="_blank">ReviewAid Mirror</a>
+      </div>
+
+
+
+      <div class="disclaimer-note">
+          <strong>Note:</strong> 
+          ReviewAid is not intended to replace manual screening and data extraction. Rather, it is designed to function as an independent supplementary reviewer, helping to minimize human error and enhance the overall precision, consistency, and reliability of the research process.
+          </div>
+ 
+      <div class="disclaimer-note">
+        <strong>IMP:</strong> 
+         Please restrict each submission to a maximum of 20 articles. Submissions exceeding this limit will result in processing of only the first 20 articles, after which the process will terminate prematurely. Kindly adhere to this restriction. Please respect this limit.
+        </div>
+      </div>
+
+
+
+
 
       <div class="highlight-section reveal">
         <h2>Key Features</h2>
@@ -983,7 +989,7 @@
           </div>
           <div class="tool">
             <h4>3. Batch Processing</h4>
-            <p>Process up to 50 papers at once</p>
+            <p>Process up to 20 papers at once</p>
           </div>
           <div class="tool">
             <h4>4. Multiple Exports</h4>
@@ -1000,114 +1006,25 @@
         </div>
       </div>
 
-      <div class="section reveal">
-        <h2>Interface Previews</h2>
-        <div class="gallery">
-          <div class="gallery-item">
-            <img src="screenshots/screenshot1.png" alt="ReviewAid Interface">
-            <div class="caption">Main Dashboard</div>
-          </div>
-          <div class="gallery-item">
-            <img src="screenshots/screenshot2.png" alt="Data Extraction Interface">
-            <div class="caption">Data Extraction Mode</div>
-          </div>
-          <div class="gallery-item">
-            <img src="screenshots/screenshot4.png" alt="Results View">
-            <div class="caption">Results & Export Options</div>
-          </div>
+
+      <div class="section reveal" style="text-align: center; margin-top: 30px;">
+        <p style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.2rem; font-weight: 600; color: var(--text-heading); flex-wrap: wrap;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FF0000">
+            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+          </svg>
+          You can also check out the full walkthrough and demonstration of ReviewAid on <a href="https://www.youtube.com/watch?v=M2S32pPaQE4" target="_blank">YouTube</a>
+        </p>
+        
         </div>
       </div>
+      
 
-
-      <div class="section reveal">
-        <h2>Confidence Scoring System</h2>
-        <p>This system implements a <strong>hierarchical four-tier confidence model</strong> designed to maximize precision and minimize false classifications during automated paper screening and data extraction. The logic prioritizes <strong>deterministic rule-based decisions</strong> before progressively falling back to algorithmic and heuristic estimation only when necessary.</p>
+ 
         
-        <div class="highlight-section" style="margin-top: 30px;">
-          <h3>Overview</h3>
-          <p style="margin-bottom: 15px;">The confidence score reflects how reliably a paper has been classified or extracted. Scores range from <strong>0.0 to 1.0</strong>, where higher values indicate stronger certainty and lower values explicitly flag the need for manual review.</p>
-          <p style="margin-bottom: 0;">The system operates in the following order:</p>
-          <ul class="confidence-overview-list">
-            <li><strong>Deterministic Rule-Based Classification (For Screener)</strong></li>
-            <li><strong>LLM Self-Assessment (Extractor starts directly from Tier 2)</strong></li>
-            <li><strong>Heuristic Keyword Estimation</strong></li>
-            <li><strong>Low-Confidence Default</strong></li>
-          </ul>
-          <p style="margin-top: 15px; font-size: 0.95rem; color: var(--text-muted);">Each tier is only activated if the previous tier fails to produce a valid and reliable result.</p>
-        </div>
+      <div class="section reveal">
+        <h2>Confidence Scoring System</h2> 
 
-        <div class="tiers-grid">
-
-          <div class="tier-card">
-            <h3>Tier 1: Deterministic Rule-Based</h3>
-            <h4>Highest Priority</h4>
-            <p><strong>Purpose:</strong> Eliminate ambiguity using explicit user-defined rules.</p>
-            <p><strong>Logic:</strong></p>
-            <ul>
-              <li>The system performs a preliminary scan for <strong>exclusion</strong> and <strong>inclusion</strong> keywords.</li>
-              <li>If <strong>exclusion keywords are detected without any corresponding inclusion keywords</strong>, the paper is automatically classified as <strong>Excluded</strong> with a confidence score of <strong>1.0 (100%)</strong>.</li>
-              <li>If <strong>both exclusion and inclusion keywords</strong> are present, this tier is <strong>bypassed</strong> to avoid false positives, delegating the decision to the AI.</li>
-            </ul>
-            <div class="rationale">
-              <strong>Rationale:</strong> Explicit rules provide deterministic certainty and override probabilistic inference when applicable.
-            </div>
-          </div>
-
-
-          <div class="tier-card">
-            <h3>Tier 2: LLM Self-Assessment</h3>
-            <h4>Primary Mechanism</h4>
-            <p><strong>Purpose:</strong> Leverage the model’s internal reasoning and evidence-based judgment.</p>
-            <p><strong>Logic:</strong></p>
-            <ul>
-              <li>The Large Language Model (LLM) is explicitly instructed to evaluate its own screening or extraction decision.</li>
-              <li>It assigns a <strong>confidence score between 0.0 and 1.0</strong>.</li>
-              <li>The score is based strictly on <strong>explicit textual evidence</strong> found in the paper.</li>
-              <li>The confidence value is parsed directly from the model’s structured JSON output.</li>
-            </ul>
-            <div class="rationale">
-              <strong>Rationale:</strong> Captures nuanced contextual understanding that deterministic rules cannot, while maintaining transparency through self-reported certainty.
-            </div>
-          </div>
-
-  
-          <div class="tier-card">
-            <h3>Tier 3: Heuristic Estimation</h3>
-            <h4>Fallback</h4>
-            <p><strong>Purpose:</strong> Provide a probabilistic estimate when LLM confidence is unavailable.</p>
-            <p><strong>Triggered when:</strong> The LLM fails to return a valid confidence value (e.g., formatting or JSON parsing errors).</p>
-            <p><strong>Screener Logic:</strong></p>
-            <ul>
-              <li>The system analyzes the users input <strong>Inclusions and Exclusions critiera</strong> and matches with the paper's full-text and determines the confidence level.</li>
-            </ul>
-            <p><strong>Extractor Logic:</strong></p>
-            <ul>
-              <li>The system analyzes <strong>Extracted data</strong> with the paper's full-text and determines the confidence level.</li>
-            </ul>
-            <div class="rationale">
-              <strong>Rationale:</strong> Offers a best-effort estimate derived from text structure rather than semantic certainty.
-            </div>
-          </div>
-
-       
-          <div class="tier-card" style="border-top-color: #ef4444;">
-            <h3>Tier 4: Low-Confidence Default</h3>
-            <h4>Last Resort</h4>
-            <p><strong>Purpose:</strong> Explicitly flag unreliable outputs.</p>
-            <p><strong>Triggered when:</strong> Data extraction fails entirely (e.g., Regex failure or missing sections).</p>
-            <p><strong>Logic:</strong></p>
-            <ul>
-              <li>Assigns a <strong>baseline low confidence score</strong> (e.g., <code>0.2</code>).</li>
-              <li>Automatically flags the result for <strong>mandatory manual review</strong>.</li>
-            </ul>
-            <div class="rationale">
-              <strong>Rationale:</strong> Prevents silent failures by clearly signaling unreliability.
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top: 50px;">
-            <h3>Confidence Score Interpretation</h3>
+        <div style="margin-top: 25px;">
             <p>This layered approach ensures that high-confidence decisions are automated safely, while ambiguous or unreliable cases are clearly flagged for human oversight.</p>
             <div class="table-responsive">
                 <table class="confidence-table">
@@ -1122,37 +1039,37 @@
                     <tbody>
                         <tr>
                             <td><strong>1.0 (100%)</strong></td>
-                            <td><span class="confidence-badge">Definitive Match</span></td>
+                            <td><span class="confidence-badge" style="background:#dcfce7; color:#166534;">Definitive Match</span></td>
                             <td>Deterministic rule-based classification / No ambiguity.</td>
                             <td>Fully automated decision</td>
                         </tr>
                         <tr>
                             <td><strong>0.8 – 1.0</strong></td>
-                            <td><span class="confidence-badge">Very High</span></td>
+                            <td><span class="confidence-badge" style="background:#dbeafe; color:#1e40af;">Very High</span></td>
                             <td>AI strongly validates the decision using explicit textual evidence.</td>
                             <td>Safe to accept</td>
                         </tr>
                         <tr>
                             <td><strong>0.6 – 0.79</strong></td>
-                            <td><span class="confidence-badge">High</span></td>
+                            <td><span class="confidence-badge" style="background:#e0f2fe; color:#075985;">High</span></td>
                             <td>Criteria appear satisfied based on standard academic structure and content.</td>
                             <td>Review optional</td>
                         </tr>
                         <tr>
                             <td><strong>0.4 – 0.59</strong></td>
-                            <td><span class="confidence-badge">Moderate</span></td>
+                            <td><span class="confidence-badge" style="background:#ffedd5; color:#9a3412;">Moderate</span></td>
                             <td>Ambiguous context or loosely met criteria.</td>
                             <td>Manual verification recommended</td>
                         </tr>
                         <tr>
                             <td><strong>0.1 – 0.39</strong></td>
-                            <td><span class="confidence-badge">Low</span></td>
+                            <td><span class="confidence-badge" style="background:#fee2e2; color:#991b1b;">Low</span></td>
                             <td>Based mainly on heuristic keyword estimation.</td>
                             <td>High risk of error</td>
                         </tr>
                         <tr>
                             <td><strong>&lt; 0.1</strong></td>
-                            <td><span class="confidence-badge">Unreliable</span></td>
+                            <td><span class="confidence-badge" style="background:#f3f4f6; color:#374151;">Unreliable</span></td>
                             <td>Derived from fallback or failed extraction methods.</td>
                             <td>Mandatory manual review</td>
                         </tr>
@@ -1165,95 +1082,47 @@
 
 
 
-      <div class="section reveal">
-        <h2>Bulletproof Parsing Pipeline</h2>
-        <p><strong>Purpose:</strong> Safely parse API/AI responses, even if the JSON is broken or missing.</p>
-        
-        <div class="highlight-section">
-            <h3>Flow</h3>
-            <ol style="margin-left: 20px; color: var(--text-secondary); line-height: 1.8;">
-                <li><strong>If <code>raw_result</code> is <code>None</code></strong><br>
-                &rarr; Use regex to extract data locally.</li>
-                <li><strong>Clean the response</strong><br>
-                &rarr; Remove Markdown, comments, and trailing commas.</li>
-                <li><strong>Try standard JSON parsing</strong><br>
-                &rarr; <code>json.loads</code></li>
-                <li><strong>If that fails, try JSON5</strong><br>
-                &rarr; Handles loose / malformed JSON.</li>
-                <li><strong>If that fails, use AI repair</strong><br>
-                &rarr; Ask AI to fix the JSON.</li>
-                <li><strong>Final fallback</strong><br>
-                &rarr; Extract known keys using regex.</li>
-            </ol>
-        </div>
-
-        <div class="motivation" style="background: rgba(16, 185, 129, 0.1); border-left-color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">
-            <h3 style="margin-top: 0; color: #ecfdf5;">Guarantee</h3>
-            <ul style="margin-left: 20px;">
-                <li>Never crashes</li>
-                <li>Always attempts to recover usable data</li>
-            </ul>
-        </div>
-      </div>
-
-     
-      <div class="section reveal">
-        <h2>Usage</h2>
-        <p>Follow these steps to get started with ReviewAid for your systematic review.</p>
-
-        <div class="tiers-grid">
-            <div class="tier-card" style="border-top-color: #4189DC;">
-                <h3>1. Run the App</h3>
-                <p>Launch the <strong>Streamlit web app</strong> to begin your session.</p>
-            </div>
-            
-            <div class="tier-card" style="border-top-color: #4189DC;">
-                <h3>2. Select Mode</h3>
-                <p>Choose the workflow that suits your current needs:</p>
-                <ul>
-                    <li><strong>Full-text Paper Screener:</strong> Screen papers based on PICO (Population, Intervention, Comparison, Outcome) criteria.</li>
-                    <li><strong>Full-text Data Extractor:</strong> Extract specific fields (Author, Year, Conclusion, etc.) from research papers.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="tools">
-            <div class="tool" style="text-align: left;">
-                <h4>Workflow: Screener</h4>
-                <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-secondary); margin-top: 10px;">
-                    <li>Enter your PICO criteria (Inclusion/Exclusion) in the input fields.</li>
-                    <li>Upload your PDF papers (Batch upload supported).</li>
-                    <li>Click "Screen Papers".</li>
-                    <li>Monitor the "System Terminal" for real-time logs of extraction, API calls, and processing status.</li>
-                    <li>View the "Screening Dashboard" for a pie chart of Included/Excluded/Maybe decisions.</li>
-                    <li>Download results as CSV, XLSX, or DOCX.</li>
-                </ul>
-            </div>
-
-            <div class="tool" style="text-align: left;">
-                <h4>Workflow: Extractor</h4>
-                <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-secondary); margin-top: 10px;">
-                    <li>Enter the fields you want to extract (comma-separated).</li>
-                    <li>Upload your PDF papers.</li>
-                    <li>Click "Process Papers".</li>
-                    <li>Monitor the "System Terminal" for logs.</li>
-                    <li>View extracted data in the dashboard.</li>
-                    <li>Download extracted data as CSV, XLSX, or DOCX.</li>
-                </ul>
-            </div>
-        </div>
-      </div>
-
+    
+      
 
       <div class="section acknowledgements-section reveal">
         <h2>Acknowledgements</h2>
         <div class="acknowledgement-content">
-          <img src="assets/GLM4.6VFlash.png" alt="ZAI GLM-4.6V-Flash Logo" class="ack-img">
+          <img src="assets/GLMV.png" alt="ZAI GLM-4.6V-Flash Logo" class="ack-img">
           <div class="ack-text">
             <p>I gratefully acknowledge developers of <strong>GLM-4.6V-Flash (Z.ai)</strong> for providing the AI model used in ReviewAid.</p>
             <p>The visual and text-based reasoning capabilities of GLM-4.6V-Flash have greatly enhanced ReviewAid's full-text screening and data extraction workflows.</p>
-            <p>For more information, please see <a href="https://arxiv.org/abs/2507.01006" target="_blank">GLM-4.6V-Flash paper</a> and <a href="https://huggingface.co/zai-org/GLM-4.6V-Flash" target="_blank">GLM-4.6V-Flash Hugging Face</a>.</p>
+            <p>For more information, please see <a href="https://arxiv.org/abs/2507.01006" target="_blank" style="color: #4189DC; font-weight: 600;">GLM-4.6V-Flash paper</a> and <a href="https://huggingface.co/zai-org/GLM-4.6V-Flash" target="_blank" style="color: #4189DC; font-weight: 600;">GLM-4.6V-Flash Hugging Face</a>.</p>
+            <p>I would also like to thank <strong>Mohith Balakrishnan</strong>  for his thorough validation of ReviewAid, including batch testing, error checks, and confidence verification, which significantly improved the tool’s reliability and accuracy.</p>
           </div>
+        </div>
+      </div>
+
+
+      <h2>Citation</h2>
+      <div class="section citation-section reveal">
+        
+        <p>If you use ReviewAid in your research, please cite it using the following format:</p>
+        
+        <div class="citation-controls">
+            <select id="citation-style" class="citation-select">
+                <option value="APA">APA</option>
+                <option value="Harvard">Harvard</option>
+                <option value="MLA">MLA</option>
+                <option value="Chicago">Chicago</option>
+                <option value="IEEE">IEEE</option>
+                <option value="Vancouver">Vancouver</option>
+            </select>
+        </div>
+
+        <div id="citation-display" class="citation-box">
+           
+        </div>
+
+        <div class="citation-actions">
+            <button id="copy-citation-btn" class="action-btn btn-primary">Copy Citation</button>
+            <button id="download-ris-btn" class="action-btn btn-secondary">Download RIS</button>
+            <button id="download-bib-btn" class="action-btn btn-secondary">Download BibTeX</button>
         </div>
       </div>
 
@@ -1276,22 +1145,6 @@
 
   <script>
     
-    const toggleBtn = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement;
-
-  
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    htmlElement.setAttribute('data-theme', currentTheme);
-
-    toggleBtn.addEventListener('click', () => {
-        const existingTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = existingTheme === 'dark' ? 'light' : 'dark';
-        
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
-
-
     window.addEventListener('scroll', reveal);
 
     function reveal(){
@@ -1310,6 +1163,114 @@
     }
 
     reveal();
+
+
+    const videos = document.querySelectorAll('.preview-video');
+    videos.forEach(video => {
+        video.playbackRate = 2.0;
+    });
+
+    
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+
+    const currentTheme = localStorage.getItem('theme');
+    
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
+    themeToggleBtn.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        
+        let theme = 'light';
+        if (body.classList.contains('dark-mode')) {
+            theme = 'dark';
+        }
+        
+        localStorage.setItem('theme', theme);
+    });
+
+  
+    const citations = {
+        "APA": "Sahu, V. (2025). ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.18060973",
+        "Harvard": "Sahu, V., 2025. ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0). Zenodo. Available at: https://doi.org/10.5281/zenodo.18060973",
+        "MLA": "Sahu, Vihaan. \"ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0).\" 2025, Zenodo, https://doi.org/10.5281/zenodo.18060973.",
+        "Chicago": "Sahu, Vihaan. 2025. \"ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0).\" Zenodo. https://doi.org/10.5281/zenodo.18060973.",
+        "IEEE": "V. Sahu, \"ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0),\" Zenodo, 2025. doi: 10.5281/zenodo.18060973.",
+        "Vancouver": "Sahu V. ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0). Zenodo. 2025. doi:10.5281/zenodo.18060973"
+    };
+
+    const risData = `TY  - JOUR
+AU  - Sahu, V
+TI  - ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0)
+PY  - 2025
+DO  - 10.5281/zenodo.18060973
+ER  -`;
+
+    const bibData = `@misc{Sahu2025,
+  author={Sahu, V.},
+  title={ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0)},
+  year={2025},
+  doi={10.5281/zenodo.18060973}
+}`;
+
+    const styleSelector = document.getElementById('citation-style');
+    const displayBox = document.getElementById('citation-display');
+    const copyBtn = document.getElementById('copy-citation-btn');
+    const risBtn = document.getElementById('download-ris-btn');
+    const bibBtn = document.getElementById('download-bib-btn');
+
+    function updateDisplay() {
+        displayBox.textContent = citations[styleSelector.value];
+    }
+
+    function downloadFile(filename, content) {
+        const blob = new Blob([content], { type: 'text/plain' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    }
+
+
+    if(styleSelector) {
+        updateDisplay();
+        styleSelector.addEventListener('change', updateDisplay);
+    }
+
+    if(copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            const textToCopy = displayBox.textContent;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = copyBtn.innerText;
+                copyBtn.innerText = "Copied!";
+                setTimeout(() => {
+                    copyBtn.innerText = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        });
+    }
+
+   
+    if(risBtn) {
+        risBtn.addEventListener('click', () => {
+            downloadFile("ReviewAid_citation.ris", risData);
+        });
+    }
+
+    if(bibBtn) {
+        bibBtn.addEventListener('click', () => {
+            downloadFile("ReviewAid_citation.bib", bibData);
+        });
+    }
   </script>
 
 </body>
