@@ -113,9 +113,9 @@
       --border-focus: #cbd5e1;
       
       --accent-primary: #4189DC;
-      --accent-primary-dark: #2b6cb0;
+      --accent-primary-dark: #205185;
       --accent-secondary: #174D8B;
-      --accent-secondary-dark: #0f3560;
+      --accent-secondary-dark: #0b2644;
       
       --highlight-bg: #ebf8ff;
       --motivation-bg: #f0f9ff;
@@ -130,11 +130,15 @@
       --scrollbar-track: #f1f1f1;
       --scrollbar-thumb: #cbd5e1;
       --scrollbar-thumb-hover: #64748b;
+
+      
+      --grid-line: rgba(0, 0, 0, 0.05);
+      --grid-size: 50px;
     }
 
     body.dark-mode {
       
-      --bg-body: #0f172a; 
+      --bg-body: #181e2b; 
       --bg-surface: #1e293b; 
       --bg-surface-alt: #111827; 
       --bg-header: #020617; 
@@ -167,15 +171,39 @@
       --scrollbar-track: #0f172a;
       --scrollbar-thumb: #475569;
       --scrollbar-thumb-hover: #94a3b8;
+
+      --grid-line: rgba(255, 255, 255, 0.07);
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
       color: var(--text-main);
-      background: var(--bg-body);
+      background-color: var(--bg-body);
       overflow-x: hidden;
       transition: background-color 0.3s ease, color 0.3s ease;
+      
+     
+      background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: var(--grid-size) var(--grid-size);
+      background-attachment: fixed;
+    }
+
+
+    .interactive-link {
+      color: #4189DC;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block; 
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .interactive-link:hover {
+      color: #2b6cb0; 
+      transform: scale(1.02); 
+      cursor: pointer;
     }
 
 
@@ -294,7 +322,8 @@
     
     
     .main-content {
-      background: var(--bg-body);
+    
+      background: transparent;
       padding: 40px 0;
     }
     
@@ -922,6 +951,9 @@
         <p>
           ReviewAid is an open-source AI-driven tool designed to streamline the full-text screening and data extraction phases of systematic reviews. It leverages advanced large language models to classify papers based on PICO criteria and extract custom data fields, drastically reducing the manual workload for researchers.
         </p>
+        <p>
+          Want more details / documentation about ReviewAid? Please visit <a href="https://aurumz-rgb.github.io/ReviewAid/" target="_blank" class="interactive-link">aurumz-rgb.github.io/ReviewAid/</a> or <a href="https://github.com/aurumz-rgb/ReviewAid" target="_blank" class="interactive-link">Github Repository</a>.
+        </p>
         
         <div class="section reveal">
         <div class="gallery">
@@ -1012,7 +1044,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FF0000">
             <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
           </svg>
-          You can also check out the full walkthrough and demonstration of ReviewAid on <a href="https://www.youtube.com/watch?v=M2S32pPaQE4" target="_blank">YouTube</a>
+          You can also check out the full walkthrough and demonstration of ReviewAid on <a href="https://www.youtube.com/watch?v=M2S32pPaQE4" target="_blank" class="interactive-link">YouTube</a>
         </p>
         
         </div>
@@ -1092,7 +1124,7 @@
           <div class="ack-text">
             <p>I gratefully acknowledge developers of <strong>GLM-4.6V-Flash (Z.ai)</strong> for providing the AI model used in ReviewAid.</p>
             <p>The visual and text-based reasoning capabilities of GLM-4.6V-Flash have greatly enhanced ReviewAid's full-text screening and data extraction workflows.</p>
-            <p>For more information, please see <a href="https://arxiv.org/abs/2507.01006" target="_blank" style="color: #4189DC; font-weight: 600;">GLM-4.6V-Flash paper</a> and <a href="https://huggingface.co/zai-org/GLM-4.6V-Flash" target="_blank" style="color: #4189DC; font-weight: 600;">GLM-4.6V-Flash Hugging Face</a>.</p>
+            <p>For more information, please see <a href="https://arxiv.org/abs/2507.01006" target="_blank" class="interactive-link">GLM-4.6V-Flash paper</a> and <a href="https://huggingface.co/zai-org/GLM-4.6V-Flash" target="_blank" class="interactive-link">GLM-4.6V-Flash Hugging Face</a>.</p>
             <p>I would also like to thank <strong>Mohith Balakrishnan</strong>  for his thorough validation of ReviewAid, including batch testing, error checks, and confidence verification, which significantly improved the tool’s reliability and accuracy.</p>
           </div>
         </div>
