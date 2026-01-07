@@ -141,8 +141,8 @@
       --bg-body: #181e2b; 
       --bg-surface: #1e293b; 
       --bg-surface-alt: #111827; 
-      --bg-header: #020617; 
-      --bg-footer: #020617;
+      --bg-header: #0a0f22; 
+      --bg-footer: #0a0f22;
       
       --text-main: #f1f5f9; 
       --text-heading: #ffffff;
@@ -652,11 +652,31 @@
       text-align: left;
     }
 
+    
+    .logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
     .ack-img {
       max-width: 350px;
       height: auto;
       margin-bottom: 25px;
       border-radius: 8px;
+    }
+
+   
+    .logo-row .ack-img {
+      max-width: 300px;
+      max-height: 250px;
+      object-fit: contain;
+      margin-bottom: 0;
+      border: none; 
+      background: transparent;
     }
 
     .ack-text p {
@@ -954,7 +974,6 @@
         <p>
           Want more details / documentation about ReviewAid? Please visit <a href="https://aurumz-rgb.github.io/ReviewAid/" target="_blank" class="interactive-link">aurumz-rgb.github.io/ReviewAid/</a> or <a href="https://github.com/aurumz-rgb/ReviewAid" target="_blank" class="interactive-link">Github Repository</a>.
         </p>
-        
         <div class="section reveal">
         <div class="gallery">
           <div class="gallery-item">
@@ -1000,7 +1019,7 @@
  
       <div class="disclaimer-note">
         <strong>IMP:</strong> 
-         Please restrict each submission to a maximum of 20 articles. Submissions exceeding this limit will result in processing of only the first 20 articles, after which the process will terminate prematurely. Kindly adhere to this restriction. Please respect this limit.
+         Please restrict each submission to a maximum of 20 articles. Submissions exceeding this limit will result in processing only the first 20 articles, after which the process will terminate prematurely. Kindly adhere to this restriction. Please respect this limit.
         </div>
       </div>
 
@@ -1112,9 +1131,35 @@
 
       </div>
 
+      
+ 
+      <div class="section reveal">
+        <h2>Configuration</h2>
+        <div class="acknowledgement-content">
+          <div class="logo-row">
+            <img src="assets/openai.png" alt="OpenAI Logo" class="ack-img">
+            <img src="assets/anthropic.png" alt="Anthropic Logo" class="ack-img">
+            <img src="assets/deepseek.png" alt="DeepSeek Logo" class="ack-img">
+            <img src="assets/cohere1.png" alt="Cohere Logo" class="ack-img">
+            <img src="assets/zai.png" alt="GLMV Logo" class="ack-img">
+            <img src="assets/ollama.png" alt="Ollama Logo" class="ack-img">
+          </div>
+
+          <div class="ack-text">
+            <p>ReviewAid also supports configuration of <a href="https://openai.com" target="_blank" class="interactive-link">OpenAI</a>, <a href="https://claude.ai" target="_blank" class="interactive-link">Claude</a>, <a href="https://www.deepseek.com" target="_blank" class="interactive-link">Deepseek</a>, <a href="https://cohere.com" target="_blank" class="interactive-link">Cohere</a>, <a href="https://z.ai" target="_blank" class="interactive-link">Z.ai</a> and <a href="https://ollama.com" target="_blank" class="interactive-link">Ollama (locally)</a> via API key as well. To protect your privacy, API keys are not stored at any time.</p>
+            <p>For the tested tasks, the following models were successful:</p>
+            <p>OpenAI – GPT-4o</p>
+            <p>Deepseek – deepseek-chat</p>
+            <p>Cohere – command-a-03-2025</p>
+            <p>Z.AI – GLM-4.6V-Flash, GLM-4.5V-Flash</p>
+            <p>Anthropic – Claude-Sonnet-4-20250514</p>
+            <p>Ollama (local) – Llama3</p>
+            <p>Default – GLM-4.6V-Flash</p>
+          </div>
+        </div>
+      </div>
 
 
-    
       
 
       <div class="section acknowledgements-section reveal">
@@ -1169,6 +1214,9 @@
     <div class="footer-content">
       <div class="footer-left">
         <p>© 2025 Vihaan Sahu – Licensed under Apache 2.0</p>
+      </div>
+      <div class="footer-center">
+        <p><a href="https://aurumz-rgb.github.io/ReviewAid/" target="_blank">Documentation</a></p>
       </div>
       <div class="footer-right">
         <p><a href="https://github.com/aurumz-rgb/ReviewAid" target="_blank">GitHub Repository</a></p>
@@ -1228,24 +1276,24 @@
 
   
     const citations = {
-        "APA": "Sahu, V. (2025). ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.18060972",
-        "Harvard": "Sahu, V., 2025. ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0). Zenodo. Available at: https://doi.org/10.5281/zenodo.18060972",
-        "MLA": "Sahu, Vihaan. \"ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0).\" 2025, Zenodo, https://doi.org/10.5281/zenodo.18060972.",
-        "Chicago": "Sahu, Vihaan. 2025. \"ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0).\" Zenodo. https://doi.org/10.5281/zenodo.18060972.",
-        "IEEE": "V. Sahu, \"ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0),\" Zenodo, 2025. doi: 10.5281/zenodo.18060972.",
-        "Vancouver": "Sahu V. ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0). Zenodo. 2025. doi:10.5281/zenodo.18060972"
+        "APA": "Sahu, V. (2025). ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.1.0). Zenodo. https://doi.org/10.5281/zenodo.18060972",
+        "Harvard": "Sahu, V., 2025. ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.1.0). Zenodo. Available at: https://doi.org/10.5281/zenodo.18060972",
+        "MLA": "Sahu, Vihaan. \"ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.1.0).\" 2025, Zenodo, https://doi.org/10.5281/zenodo.18060972.",
+        "Chicago": "Sahu, Vihaan. 2025. \"ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.1.0).\" Zenodo. https://doi.org/10.5281/zenodo.18060972.",
+        "IEEE": "V. Sahu, \"ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.1.0),\" Zenodo, 2025. doi: 10.5281/zenodo.18060972.",
+        "Vancouver": "Sahu V. ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.1.0). Zenodo. 2025. doi:10.5281/zenodo.18060972"
     };
 
     const risData = `TY  - JOUR
 AU  - Sahu, V
-TI  - ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0)
+TI  - ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.1.0)
 PY  - 2025
 DO  - 10.5281/zenodo.18060972
 ER  -`;
 
     const bibData = `@misc{Sahu2025,
   author={Sahu, V.},
-  title={ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0)},
+  title={ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.1.0)},
   year={2025},
   doi={10.5281/zenodo.18060972}
 }`;

@@ -19,7 +19,7 @@ ReviewAid main GitHub Repository: [aurumz-rgb/ReviewAid.](https://github.com/aur
 
 If you use ReviewAid, please cite:
 
-**Sahu, V. (2025). ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.0.0). Zenodo.** DOI: [10.5281/zenodo.18060972](https://doi.org/10.5281/zenodo.18060972)
+**Sahu, V. (2025). ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis (v2.1.0). Zenodo.** DOI: [10.5281/zenodo.18060972](https://doi.org/10.5281/zenodo.18060972)
 
 ---
 
