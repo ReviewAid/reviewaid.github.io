@@ -119,7 +119,6 @@
       
       --highlight-bg: #ebf8ff;
       --motivation-bg: #f0f9ff;
-      --motivation-border: #4189DC;
       
       --warning-bg: #fff7ed;
       --warning-text: #c2410c;
@@ -160,7 +159,7 @@
       
       --highlight-bg: rgba(65, 137, 220, 0.1); 
       --motivation-bg: rgba(65, 137, 220, 0.15);
-      --motivation-border: #60a5fa;
+
       
       --warning-bg: rgba(194, 65, 12, 0.1);
       --warning-text: #fdba74;
@@ -969,7 +968,7 @@
       <div class="section reveal">
         <h2>About ReviewAid.</h2>
         <p>
-          ReviewAid is an open-source AI-driven tool designed to streamline the full-text screening and data extraction phases of systematic reviews. It leverages advanced large language models to classify papers based on PICO criteria and extract custom data fields, drastically reducing the manual workload for researchers.
+          ReviewAid is an open-source AI-driven tool designed to streamline full-text screening and data extraction phases of systematic reviews. It leverages advanced large language models to classify papers based on PICO criteria and extract custom data fields, drastically reducing manual workload for researchers.
         </p>
         <p>
           Want more details / documentation about ReviewAid? Please visit <a href="https://aurumz-rgb.github.io/ReviewAid/" target="_blank" class="interactive-link">aurumz-rgb.github.io/ReviewAid/</a> or <a href="https://github.com/aurumz-rgb/ReviewAid" target="_blank" class="interactive-link">Github Repository</a>.
@@ -1003,7 +1002,7 @@
       </div>
 
       <div style="margin-top: 10px;">
-            <p>If the primary ReviewAid system is experiencing high usage, resource saturation, or memory limitations, users may utilize the available mirror versions of ReviewAid without restriction.</p>
+            <p>If the primary ReviewAid system is experiencing high usage, resource saturation, or memory limitations, users may utilize available mirror versions of ReviewAid without restriction.</p>
       </div>
       
       <div class="main-links reveal">
@@ -1031,11 +1030,11 @@
         <h2>Key Features</h2>
         <div class="tools">
           <div class="tool">
-            <h4>1. PICO Screening</h4>
-            <p>AI-based inclusion/exclusion classification</p>
+            <h4>1. Full-text PICO Screening</h4>
+            <p>AI-based PICO specified inclusion/exclusion classification</p>
           </div>
           <div class="tool">
-            <h4>2. Data Extraction</h4>
+            <h4>2. Full-text Data Extraction</h4>
             <p>Custom field extraction from text</p>
           </div>
           <div class="tool">
@@ -1044,15 +1043,27 @@
           </div>
           <div class="tool">
             <h4>4. Multiple Exports</h4>
-            <p>CSV, Excel, and Word formats</p>
+            <p>Export CSV, Excel, and Word formats</p>
           </div>
           <div class="tool">
             <h4>5. Live Terminal</h4>
-            <p>Real-time processing logs</p>
+            <p>Real-time processing logs to ensure transparency</p>
           </div>
           <div class="tool">
             <h4>6. Confidence Scoring</h4>
-            <p>Estimates reliability of extraction</p>
+            <p>Estimates reliability of extraction to guide researchers to trust/not trust</p>
+          </div>
+          <div class="tool">
+            <h4>7. Configuration</h4>
+            <p>Configure any AI model using API key</p>
+          </div>
+          <div class="tool">
+            <h4>8. Use</h4>
+            <p>Runs locally/online, highly reusable</p>
+          </div>
+          <div class="tool">
+            <h4>9. Open-source</h4>
+            <p>Made by Researchers to ensure no proprietary "black box"</p>
           </div>
         </div>
       </div>
@@ -1131,6 +1142,187 @@
 
       </div>
 
+
+      <div class="section reveal">
+        <h2>Usage & Installation</h2>
+        <p>Follow these instructions to run ReviewAid online or locally.</p>
+
+        <div class="highlight-section">
+            <h3>⚡ Usage (Online)</h3>
+            <ol style="margin-left: 20px; font-size: 16px; line-height: 1.8; color: var(--text-secondary);">
+                <li style="margin-bottom: 15px;">
+                    <strong>Launch Online Streamlit hosted web app</strong>
+                    <br>
+                    <span style="font-size: 0.9em; color: var(--text-muted);">Access the application directly from your browser without installation.</span>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>Select Mode:</strong>
+                    <ul style="margin-top: 5px; margin-bottom: 5px;">
+                        <li><strong>Full-text Paper Screener:</strong> Choose this mode to screen papers based on PICO (Population, Intervention, Comparison, Outcome) criteria.</li>
+                        <li><strong>Full-text Data Extractor:</strong> Choose this mode to extract specific fields (Author, Year, Conclusion, etc.) from research papers.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>Workflow (Screener):</strong>
+                    <ul style="margin-top: 5px; margin-bottom: 5px;">
+                        <li>Enter your PICO criteria (Inclusion/Exclusion) in the input fields.</li>
+                        <li>Upload your PDF papers (Batch upload supported).</li>
+                        <li>Click "Screen Papers".</li>
+                        <li>Monitor the "System Terminal" for real-time logs of extraction, API calls, and processing status.</li>
+                        <li>View the "Screening Dashboard" for a pie chart of Included/Excluded/Maybe decisions.</li>
+                        <li>Download results as CSV, XLSX, or DOCX.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>Workflow (Extractor):</strong>
+                    <ul style="margin-top: 5px; margin-bottom: 5px;">
+                        <li>Enter the fields you want to extract (comma-separated).</li>
+                        <li>Upload your PDF papers.</li>
+                        <li>Click "Process Papers".</li>
+                        <li>Monitor the "System Terminal" for logs.</li>
+                        <li>View extracted data in the dashboard.</li>
+                        <li>Download extracted data as CSV, XLSX, or DOCX.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Configuration:</strong>
+                    <ul style="margin-top: 5px; margin-bottom: 0;">
+                        <li>For using API key, you can select the respective AI model in either Screener/Extractor.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+
+        <div class="highlight-section">
+            <h3>⚡ Usage (run streamlit Locally)</h3>
+            <p style="margin-bottom: 20px; font-size: 17px;">To run ReviewAid locally with your own API keys (OpenAI, DeepSeek, etc.), follow these steps:</p>
+            <ol style="margin-left: 20px; font-size: 16px; line-height: 1.8; color: var(--text-secondary);">
+                <li style="margin-bottom: 15px;">
+                    <strong>Clone the repository</strong><br>
+                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
+                    <code>git clone https://github.com/aurumz-rgb/ReviewAid.git</code><br>
+                    <code>cd ReviewAid</code>
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>Create and activate a virtual environment (recommended)</strong><br>
+                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
+                    <code>python -m venv venv</code><br>
+                    <code>source venv/bin/activate</code> &nbsp; <span style="font-size: 0.85em; color: var(--text-muted);"># macOS / Linux</span><br>
+                    <code>venv\Scripts\activate</code> &nbsp; <span style="font-size: 0.85em; color: var(--text-muted);"># Windows</span>
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>Install dependencies</strong><br>
+                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
+                    <code>pip install -r requirements.txt</code>
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>Start the Streamlit application</strong><br>
+                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
+                    <code>streamlit run app.py</code>
+                    </div>
+                </li>
+                <li style="margin-bottom: 0;">
+                    <strong>Configure AI model along with API key inside the UI</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>Select <strong>AI model</strong> as the provider</li>
+                        <li>Enter your API Key</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+
+        <div class="highlight-section">
+            <h3>🖥️ Running ReviewAid Locally with Ollama (No API Key Required)</h3>
+            <p style="margin-bottom: 20px;">ReviewAid supports <strong>local inference using Ollama</strong>, allowing you to run the application <strong>without any external API keys</strong>. This is ideal for users who prefer offline usage, enhanced privacy, or full local control.</p>
+            
+            <h4>Prerequisites</h4>
+            <p style="margin-bottom: 10px;">Ensure the following are installed on your system:</p>
+            <ul style="margin-left: 20px; font-size: 16px; color: var(--text-secondary); margin-bottom: 20px;">
+                <li><strong>Python 3.12+</strong></li>
+                <li><strong>Ollama</strong> (installed and running locally)
+                    <ul style="margin-left: 20px; list-style-type: circle;">
+                        <li>Download: <a href="https://ollama.com" target="_blank" style="color: var(--accent-primary);">https://ollama.com</a></li>
+                    </ul>
+                </li>
+                <li>At least one supported Ollama model (e.g., <code>llama3</code>)</li>
+            </ul>
+
+            <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
+                <p style="margin-bottom: 10px;"><strong>Pull a model (example):</strong></p>
+                <code>ollama pull llama3</code>
+                <br><br>
+                <p style="margin-bottom: 0;"><strong>Verify Ollama is running:</strong></p>
+                <code>ollama list</code>
+            </div>
+
+            <h4 style="margin-top: 25px; font-size: 17px;">▶️ Running ReviewAid with Ollama</h4>
+            <ol style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary); margin-top: 15px;">
+                <li style="margin-bottom: 15px;">
+                    <strong>Clone the repository</strong><br>
+                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
+                    <code>git clone https://github.com/aurumz-rgb/ReviewAid.git</code><br>
+                    <code>cd ReviewAid</code>
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>Create and activate a virtual environment (recommended)</strong><br>
+                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
+                    <code>python -m venv venv</code><br>
+                    <code>source venv/bin/activate</code> &nbsp; <span style="font-size: 0.85em; color: var(--text-muted);"># macOS / Linux</span><br>
+                    <code>venv\Scripts\activate</code> &nbsp; <span style="font-size: 0.85em; color: var(--text-muted);"># Windows</span>
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>Install dependencies</strong><br>
+                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
+                    <code>pip install -r requirements.txt</code>
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>Start the Streamlit application</strong><br>
+                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
+                    <code>streamlit run app.py</code>
+                    </div>
+                </li>
+                <li style="margin-bottom: 20px;">
+                    <strong>Configure Ollama inside the UI</strong>
+                    <ul style="margin-top: 8px;">
+                        <li>Select <strong>Ollama (Local)</strong> as the provider</li>
+                        <li>Choose a local model (e.g., <code>llama3</code>)</li>
+                        <li>No API key is required</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="motivation" style="background: rgba(65, 137, 220, 0.1);">
+                <h3 style="margin-top: 0;">Privacy Advantage</h3>
+                <p style="margin-bottom: 10px;">When using Ollama:</p>
+                <ul style="margin-left: 20px;">
+                    <li>All inference runs <strong>entirely on your local machine</strong></li>
+                    <li>No data is sent to external servers</li>
+                    <li>No API keys are required or stored</li>
+                </ul>
+                <p style="margin-top: 15px; margin-bottom: 0;">This makes Ollama the <strong>most privacy-preserving configuration</strong> supported by ReviewAid.</p>
+            </div>
+
+            <div class="disclaimer-note">
+                <strong>Notes</strong>
+                <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 0;">
+                    <li>Performance depends on your local hardware (CPU/GPU/RAM)</li>
+                    <li>Large PDFs or batch sizes may take longer on CPU-only systems</li>
+                    <li>For best results, ensure Ollama is running before launching Streamlit</li>
+                </ul>
+            </div>
+        </div>
+
+      </div>
+
+
       
  
       <div class="section reveal">
@@ -1147,7 +1339,7 @@
 
           <div class="ack-text">
             <p>ReviewAid also supports configuration of <a href="https://openai.com" target="_blank" class="interactive-link">OpenAI</a>, <a href="https://claude.ai" target="_blank" class="interactive-link">Claude</a>, <a href="https://www.deepseek.com" target="_blank" class="interactive-link">Deepseek</a>, <a href="https://cohere.com" target="_blank" class="interactive-link">Cohere</a>, <a href="https://z.ai" target="_blank" class="interactive-link">Z.ai</a> and <a href="https://ollama.com" target="_blank" class="interactive-link">Ollama (locally)</a> via API key as well. To protect your privacy, API keys are not stored at any time.</p>
-            <p>For the tested tasks, the following models were successful:</p>
+            <p>For tested tasks, the following models were successful:</p>
             <p>OpenAI – GPT-4o</p>
             <p>Deepseek – deepseek-chat</p>
             <p>Cohere – command-a-03-2025</p>
