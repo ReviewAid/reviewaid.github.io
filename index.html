@@ -5,9 +5,9 @@
  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReviewAid / AI Screener & Extractor</title>
-  <meta name="description" content="ReviewAid is an open-source AI-driven tool for full-text screening and data extraction for systematic reviews, featuring PICO analysis and publication-ready exports.">
-  <meta name="keywords" content="ReviewAid, Ai Screener, Data Extractor, Systematic Review, PICO, Data Extraction, AI Screening, Literature Review, Research-articles">
+  <title>ReviewAid — Free AI Systematic Review Screener & Data Extractor</title>
+<meta name="description" content="Free AI-powered systematic review tool. Automate full-text PICO screening and custom data extraction from PDFs — no installation needed. Export to CSV, Excel, and Word.">
+  <meta name="keywords" content="systematic review screening tool, AI data extraction, PICO screening, full-text screening, systematic review automation, literature review AI, research paper screener, data extraction tool, evidence synthesis, AI systematic review">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="author" content="Vihaan Sahu">
   <meta name="copyright" content="© 2025 Vihaan Sahu">
@@ -71,7 +71,7 @@
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "sameAs": [
       "https://github.com/aurumz-rgb/ReviewAid",
-      "https://doi.org/10.5281/zenodo.18060972"
+      "https://doi.org/10.5281/zenodo.18060972",
       "https://doi.org/10.5334/jors.672"
     ],
     "applicationSubCategory": "Systematic Review Automation",
@@ -90,863 +90,9 @@
     ]
   }
   </script>
-    <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    :root {
-  
-      --bg-body: #f8f9fa;
-      --bg-surface: #ffffff;
-      --bg-surface-alt: #f9fafb;
-      --bg-header: linear-gradient(135deg, #0c1117 0%, #111827 100%);
-      --bg-footer: #1f2937;
-      
-      --text-main: #333333;
-      --text-heading: #1f2937;
-      --text-secondary: #4b5563;
-      --text-muted: #6b7280;
-      --text-inverted: #ffffff;
-      
-      --border-color: #e5e7eb;
-      --border-focus: #cbd5e1;
-      
-      --accent-primary: #4189DC;
-      --accent-primary-dark: #205185;
-      --accent-secondary: #174D8B;
-      --accent-secondary-dark: #0b2644;
-      
-      --highlight-bg: #ebf8ff;
-      --motivation-bg: #f0f9ff;
-      
-      --warning-bg: #fff7ed;
-      --warning-text: #c2410c;
-      
-      --code-bg: #ffffff;
-      --code-text: #334155;
 
-      --scrollbar-track: #f1f1f1;
-      --scrollbar-thumb: #cbd5e1;
-      --scrollbar-thumb-hover: #64748b;
+  <link rel="stylesheet" href="styles.css">
 
-      
-      --grid-line: rgba(0, 0, 0, 0.05);
-      --grid-size: 50px;
-    }
-
-    body.dark-mode {
-      
-      --bg-body: #181e2b; 
-      --bg-surface: #1e293b; 
-      --bg-surface-alt: #111827; 
-      --bg-header: #0a0f22; 
-      --bg-footer: #0a0f22;
-      
-      --text-main: #f1f5f9; 
-      --text-heading: #ffffff;
-      --text-secondary: #cbd5e1;
-      --text-muted: #94a3b8; 
-      --text-inverted: #e2e8f0;
-      
-      --border-color: #334155; 
-      --border-focus: #475569;
-      
-      --accent-primary: #4189DC; 
-      --accent-primary-dark: #60a5fa;
-      --accent-secondary: #1e3a8a;
-      --accent-secondary-dark: #1e40af;
-      
-      --highlight-bg: rgba(65, 137, 220, 0.1); 
-      --motivation-bg: rgba(65, 137, 220, 0.15);
-
-      
-      --warning-bg: rgba(194, 65, 12, 0.1);
-      --warning-text: #fdba74;
-      
-      --code-bg: #0f172a;
-      --code-text: #e2e8f0;
-
-      --scrollbar-track: #0f172a;
-      --scrollbar-thumb: #475569;
-      --scrollbar-thumb-hover: #94a3b8;
-
-      --grid-line: rgba(255, 255, 255, 0.07);
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: var(--text-main);
-      background-color: var(--bg-body);
-      overflow-x: hidden;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      
-     
-      background-image: 
-        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-      background-size: var(--grid-size) var(--grid-size);
-      background-attachment: fixed;
-    }
-
-
-    .interactive-link {
-      color: #4189DC;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block; 
-      transition: color 0.2s ease, transform 0.2s ease;
-    }
-
-    .interactive-link:hover {
-      color: #2b6cb0; 
-      transform: scale(1.02); 
-      cursor: pointer;
-    }
-
-
-    ::-webkit-scrollbar {
-      width: 14px;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: var(--scrollbar-track);
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: var(--scrollbar-thumb);
-      border-radius: 6px;
-      border: 3px solid var(--scrollbar-track); 
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--scrollbar-thumb-hover); 
-      border: 3px solid var(--scrollbar-track);
-    }
-    
-  
-    ::-webkit-scrollbar-thumb:active {
-      background: var(--accent-primary) !important; 
-      border: 3px solid var(--scrollbar-track) !important; 
-    }
-    
-
-    html {
-      scrollbar-width: thin;
-      scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-    }
-
-
-    .reveal {
-      position: relative;
-      transform: translateY(50px);
-      opacity: 0;
-      transition: all 0.8s ease-out;
-    }
-
-    .reveal.active {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    
-    .header {
-      background: var(--bg-header);
-      color: var(--text-inverted);
-      padding: 40px 0;
-      text-align: center;
-      border-bottom: 5px solid var(--accent-primary);
-      position: relative; 
-    }
-
-   
-    #theme-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0);
-      border: 1px solid rgba(255, 255, 255, 0);
-      color: white;
-      padding: 8px 12px;
-      border-radius: 30%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      z-index: 10;
-    }
-
-    #theme-toggle:hover {
-    
-      transform: scale(1.1);
-    }
-
-    #theme-toggle svg {
-      width: 24px;
-      height: 24px;
-      fill: currentColor;
-    }
-    
-    .header-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      font-weight: 700;
-      color: #ffffff;
-      line-height: 1.2;
-    }
-    
-    .tagline {
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-      color: #e2e8f0;
-      font-weight: 300;
-    }
-
-    .banner-img {
-        width: 100%;
-        max-width: 1200px; 
-        height: auto;
-        border-radius: 12px;
-        margin: 20px auto;
-        display: block;
-    }
-    
-    
-    
-    .main-content {
-    
-      background: transparent;
-      padding: 40px 0;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    .section {
-      margin-bottom: 50px;
-    }
-    
-    h2 {
-      font-size: 2.2rem;
-      color: var(--text-heading);
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 3px solid var(--accent-primary);
-    }
-    
-    h3 {
-      font-size: 1.4rem;
-      color: var(--text-heading);
-      margin-bottom: 15px;
-      margin-top: 10px;
-    }
-    
-    p {
-      margin-bottom: 20px;
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-    }
-    
-    .main-links {
-      text-align: center;
-      margin: 40px 0;
-    }
-    
-    .main-links a {
-      display: inline-block;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 8px;
-      transition: all 0.3s ease;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 15px rgba(65, 137, 220, 0.3);
-    }
-    
-    
-    .main-links a:not(.primary) {
-      background: var(--accent-secondary);
-    }
-    
-    .main-links a:not(.primary):hover {
-      background: var(--accent-secondary-dark);
-      transform: translateY(-3px);
-    }
-    
- 
-    .main-links a.primary {
-      background: var(--accent-primary);
-    }
-    
-    .main-links a.primary:hover {
-      background: var(--accent-primary-dark); 
-      transform: translateY(-3px);
-    }
-    
-    .tools {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin: 30px 0;
-    }
-    
-    .tool {
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      background: var(--bg-surface-alt);
-      transition: all 0.3s ease;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    
-    .tool:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      border-color: var(--accent-primary);
-    }
-    
-    .tool h4 {
-      color: var(--text-heading);
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-    
-    .tool p {
-      color: var(--text-secondary);
-      margin-bottom: 0;
-      font-size: 1rem;
-    }
-    
-    .highlight-section {
-      background: var(--highlight-bg);
-      padding: 40px;
-      border-radius: 10px;
-      margin-bottom: 50px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      border: 1px solid var(--border-color);
-    }
-    
-    .highlight-section h2 {
-      color: var(--text-heading);
-      border-bottom: 3px solid var(--accent-primary);
-    }
-    
-   
-    .gallery {
-      display: flex;
-      flex-direction: column; 
-      gap: 50px; 
-      max-width: 1000px;
-      margin: 30px auto;
-    }
-    
-    .gallery-item {
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      background: var(--bg-surface);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .gallery-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-    
-    
-    .gallery-item video {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9; 
-      object-fit: contain;
-      display: block;
-      background-color: #000;
-    }
-    
- 
-    .gallery-item .caption {
-      padding: 20px;
-      text-align: center;
-      color: var(--text-heading);
-      font-weight: 700;
-      font-size: 1.2rem;
-      background: var(--bg-surface-alt);
-      border-top: 1px solid var(--border-color);
-    }
-
-
-    .confidence-overview-list {
-      list-style-type: none;
-      padding-left: 10px;
-    }
-    
-    .confidence-overview-list li {
-      position: relative;
-      padding-left: 25px;
-      margin-bottom: 10px;
-    }
-    
-    .confidence-overview-list li::before {
-      content: "•";
-      color: var(--accent-primary);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-      font-size: 1.2em;
-    }
-
-    .tiers-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 25px;
-      margin: 30px 0;
-    }
-
-    .tier-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border-top: 5px solid var(--accent-primary);
-    }
-
-    .tier-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    }
-
-    .tier-card h3 {
-      margin-top: 0;
-      font-size: 1.25rem;
-      color: var(--text-heading);
-    }
-
-    .tier-card h4 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-      margin-top: 15px;
-    }
-
-    .tier-card p {
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-      color: var(--text-secondary);
-    }
-
-    .tier-card ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 15px;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-    
-    .tier-card ul li {
-      margin-bottom: 5px;
-    }
-
-
-    .table-responsive {
-      overflow-x: auto;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    }
-
-    .confidence-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--bg-surface);
-      min-width: 600px; 
-    }
-
-    .confidence-table th, 
-    .confidence-table td {
-      padding: 16px;
-      text-align: left;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .confidence-table th {
-      background-color: #1f2937; 
-      color: white;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-    }
-    
-    
-    body.dark-mode .confidence-table th {
-      background-color: #0f172a;
-      border-bottom: 1px solid var(--accent-primary);
-    }
-
-    .confidence-table tr:nth-child(even) {
-      background-color: var(--bg-surface-alt);
-    }
-
-    .confidence-table tr:hover {
-      background-color: rgba(65, 137, 220, 0.1);
-    }
-
-    .confidence-table td:first-child {
-      font-weight: 600;
-      color: var(--text-heading);
-    }
-
-    .confidence-badge {
-      display: inline-block;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      background: #e5e7eb;
-      color: #374151;
-    }
-    
-    body.dark-mode .confidence-badge {
-       background: #334155;
-       color: #f1f5f9;
-    }
-
-    .rationale {
-      font-style: italic;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid var(--border-color);
-    }
-
-
-
-    .acknowledgement-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    
-    .logo-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-bottom: 30px;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .ack-img {
-      max-width: 350px;
-      height: auto;
-      margin-bottom: 25px;
-      border-radius: 8px;
-    }
-
-   
-    .logo-row .ack-img {
-      max-width: 300px;
-      max-height: 250px;
-      object-fit: contain;
-      margin-bottom: 0;
-      border: none; 
-      background: transparent;
-    }
-
-    .ack-text p {
-      margin: 0 0 15px 0;
-      max-width: 100%;
-    }
-
-    .ack-text strong {
-      color: var(--accent-primary);
-    }
-
-    .citation-section {
-
-
-  
-    }
-
-    .citation-controls {
-      margin-bottom: 20px;
-    }
-
-    .citation-select {
-      padding: 12px 16px;
-      font-size: 1rem;
-      border: 1px solid var(--border-focus);
-      border-radius: 8px;
-      background-color: var(--bg-surface);
-      color: var(--text-heading);
-      outline: none;
-      width: 100%;
-      max-width: 300px;
-      cursor: pointer;
-      transition: border-color 0.2s;
-    }
-
-    .citation-select:focus {
-      box-shadow: 0 0 0 3px rgba(65, 137, 220, 0.1);
-    }
-
-    .citation-box {
-      background: var(--code-bg);
-      border: 1px solid var(--border-focus);
-      padding: 20px;
-      border-radius: 6px;
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-      color: var(--code-text);
-      margin-bottom: 20px;
-      position: relative;
-      line-height: 1.8;
-    }
-
-    .citation-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .action-btn {
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 0.95rem;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .btn-primary {
-      background-color: var(--accent-primary);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--accent-primary-dark);
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background-color: var(--bg-surface-alt);
-      color: var(--text-heading);
-      border: 1px solid var(--border-color);
-    }
-
-    .btn-secondary:hover {
-      background-color: var(--border-color);
-      transform: translateY(-1px);
-    }
-    
-    footer {
-      background: var(--bg-footer);
-      color: var(--text-inverted);
-      padding: 20px 0;
-      margin-top: 0;
-    }
-    
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .footer-left {
-      text-align: left;
-      flex: 1;
-    }
-    
-    .footer-center {
-      text-align: center;
-      flex: 1;
-    }
-    
-    .footer-right {
-      text-align: right;
-      flex: 1;
-    }
-    
-    footer p {
-      color: #e5e7eb;
-      margin-bottom: 0;
-      font-size: 1rem;
-    }
-    
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    
-    footer a:hover {
-      color: #e2e8f0;
-      text-decoration: underline;
-    }
-    
-    .heart {
-      color: #e53e3e;
-    }
-    
-    .maroon {
-      color: #e14242;
-    }
-    
-    .motivation {
-      background: var(--motivation-bg);
-      padding: 25px;
-      border-radius: 10px;
-      margin: 25px 0;
-      border-left: 5px solid var(--motivation-border);
-      font-style: italic;
-      color: var(--text-secondary);
-    }
-
-
-    .disclaimer-note {
-      background: var(--warning-bg); 
-      padding: 25px;
-      border-radius: 10px;
-      margin: 25px 0;
-      border: 1px solid rgba(194, 65, 12, 0.2);
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-    }
-
-    .disclaimer-note strong {
-      color: var(--warning-text); 
-      display: block;
-      margin-bottom: 5px;
-    }
-    
- 
-    body:not(.dark-mode) .moon-icon { display: none; }
-    body.dark-mode .sun-icon { display: none; }
-
-    
-    @media (max-width: 900px) {
-      h1 {
-        font-size: 3rem;
-      }
-      .tools {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      }
-      .gallery {
-        max-width: 100%;
-      }
-   
-      .ack-img {
-        max-width: 300px;
-      }
-      
-      .tiers-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-      
-      .tagline {
-        font-size: 1.2rem;
-      }
-      
-      
-      
-      .tools {
-        grid-template-columns: 1fr;
-      }
-      
-      .header {
-        padding: 30px 0;
-      }
-      
-      .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-      }
-      
-      .footer-left, .footer-center, .footer-right {
-        text-align: center;
-      }
-
-      #theme-toggle {
-        top: 15px;
-        right: 15px;
-      }
-
-      .ack-img {
-        max-width: 250px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
-      }
-      
-      h2 {
-        font-size: 1.8rem;
-      }
-      
-      .banner-img {
-        border-radius: 8px;
-      }
-      
-      .main-links a {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
-      }
-      
-
-      .ack-img {
-        max-width: 200px;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -963,24 +109,34 @@
     <div class="header-content">
       
 
-      <img src="assets/RA_banner1.png" alt="ReviewAid Banner" class="banner-img">
+            <h1 style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap;">ReviewAid — AI-Powered Systematic Review Screener & Data Extractor</h1>
+      <img src="assets/RA_banner1.png" alt="ReviewAid — Free AI systematic review screener and data extractor" class="banner-img">
 
   
     </div>
   </div>
 
-  <div class="main-content">
+    <main class="main-content">
     <div class="container">
       <div class="section reveal">
         <h2>About ReviewAid.</h2>
         <p>
-          ReviewAid is an open-source AI-driven tool designed to streamline full-text screening and data extraction phases of systematic reviews. It leverages advanced large language models to classify papers based on PICO criteria and extract custom data fields, drastically reducing manual workload for researchers.
+          <strong>ReviewAid</strong>  is an <strong>open-source</strong> AI-driven tool designed to streamline <strong>full-text screening</strong> and <strong>data extraction</strong> phases of systematic reviews. It leverages advanced large language models to classify papers based on PICO criteria and extract custom data fields, drastically reducing manual workload for researchers.
         </p>
         <p>
-          Want more details / documentation about ReviewAid? Please visit <a href="https://aurumz-rgb.github.io/ReviewAid/" target="_blank" class="interactive-link">aurumz-rgb.github.io/ReviewAid/</a> or <a href="https://github.com/aurumz-rgb/ReviewAid" target="_blank" class="interactive-link">Github Repository</a>.
+          ReviewAid is not intended to replace manual screening and data extraction. Rather, it is designed to function as an independent supplementary reviewer, helping to minimize human error and enhance the overall precision, consistency, and reliability of the research process. <strong>Want more details / documentation about ReviewAid?</strong> Please visit <a href="https://aurumz-rgb.github.io/ReviewAid/" target="_blank" class="interactive-link">aurumz-rgb.github.io/ReviewAid/</a> or <a href="https://github.com/aurumz-rgb/ReviewAid" target="_blank" class="interactive-link">Github Repository</a>.
         </p>
-        <div class="section reveal">
+      </div>
+      <div class="section reveal">
         <div class="gallery">
+           <div class="gallery-item">
+            <video class="preview-video" autoplay muted loop playsinline>
+              <source src="Extractor.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="caption">ReviewAid Data Extractor</div>
+          </div>
+
           <div class="gallery-item">
             <video class="preview-video" autoplay muted loop playsinline>
               <source src="Screener.mp4" type="video/mp4">
@@ -988,13 +144,7 @@
             </video>
             <div class="caption">ReviewAid Full text Screener</div>
           </div>
-          <div class="gallery-item">
-            <video class="preview-video" autoplay muted loop playsinline>
-              <source src="Extractor.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="caption">ReviewAid Data Extractor</div>
-          </div>
+         
         </div>
       </div>
 
@@ -1008,26 +158,12 @@
       </div>
 
       <div style="margin-top: 10px;">
-            <p>If the primary ReviewAid system is experiencing high usage, resource saturation, or memory limitations, users may utilize available mirror versions of ReviewAid without restriction.</p>
+            <p>If the primary ReviewAid streamlit is experiencing high usage, resource saturation, or memory limitations, users may utilize available <strong>mirror versions</strong> of ReviewAid without restriction.</p>
       </div>
       
       <div class="main-links reveal">
         <a href="https://reviewaid-mirror.streamlit.app" class="primary" target="_blank">ReviewAid Mirror</a>
       </div>
-
-
-
-      <div class="disclaimer-note">
-          <strong>Note:</strong> 
-          ReviewAid is not intended to replace manual screening and data extraction. Rather, it is designed to function as an independent supplementary reviewer, helping to minimize human error and enhance the overall precision, consistency, and reliability of the research process.
-          </div>
- 
-      <div class="disclaimer-note">
-        <strong>IMP:</strong> 
-         Please restrict each submission to a maximum of 20 articles. Submissions exceeding this limit will result in processing only the first 20 articles, after which the process will terminate prematurely. Kindly adhere to this restriction. Please respect this limit.
-        </div>
-      </div>
-
 
 
 
@@ -1075,23 +211,6 @@
       </div>
 
 
-      <div class="section reveal" style="text-align: center; margin-top: 30px;">
-        <p style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.2rem; font-weight: 600; color: var(--text-heading); flex-wrap: wrap;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FF0000">
-            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-          </svg>
-         You can check out the full walkthrough and demonstrations of ReviewAid on YouTube:  
-<a href="https://www.youtube.com/watch?v=M2S32pPaQE4" target="_blank" class="interactive-link">Using ReviewAid - How it works</a>  
-<br>
-<a href="https://www.youtube.com/watch?v=vNWXX8w1JNc" target="_blank" class="interactive-link">ReviewAid AI Models Configuration - How to configure</a>
-        </p>
-        
-        </div>
-      
-      
-
- 
-        
       <div class="section reveal">
         <h2>Confidence Scoring System</h2> 
 
@@ -1152,198 +271,17 @@
       </div>
 
 
-      <div class="section reveal">
-        <h2>Usage & Installation</h2>
-        <p>Follow these instructions to run ReviewAid online or locally.</p>
-
-        <div class="highlight-section">
-            <h3>⚡ Usage (Online)</h3>
-            <ol style="margin-left: 20px; font-size: 16px; line-height: 1.8; color: var(--text-secondary);">
-                <li style="margin-bottom: 15px;">
-                    <strong>Launch Online Streamlit hosted web app</strong>
-                    <br>
-                    <span style="font-size: 0.9em; color: var(--text-muted);">Access the application directly from your browser without installation.</span>
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Select Mode:</strong>
-                    <ul style="margin-top: 5px; margin-bottom: 5px;">
-                        <li><strong>Full-text Paper Screener:</strong> Choose this mode to screen papers based on PICO (Population, Intervention, Comparison, Outcome) criteria.</li>
-                        <li><strong>Full-text Data Extractor:</strong> Choose this mode to extract specific fields (Author, Year, Conclusion, etc.) from research papers.</li>
-                    </ul>
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Workflow (Screener):</strong>
-                    <ul style="margin-top: 5px; margin-bottom: 5px;">
-                        <li>Enter your PICO criteria (Inclusion/Exclusion) in the input fields.</li>
-                        <li>Upload your PDF papers (Batch upload supported).</li>
-                        <li>Click "Screen Papers".</li>
-                        <li>Monitor the "System Terminal" for real-time logs of extraction, API calls, and processing status.</li>
-                        <li>View the "Screening Dashboard" for a pie chart of Included/Excluded/Maybe decisions.</li>
-                        <li>Download results as CSV, XLSX, or DOCX.</li>
-                    </ul>
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Workflow (Extractor):</strong>
-                    <ul style="margin-top: 5px; margin-bottom: 5px;">
-                        <li>Enter the fields you want to extract (comma-separated).</li>
-                        <li>Upload your PDF papers.</li>
-                        <li>Click "Process Papers".</li>
-                        <li>Monitor the "System Terminal" for logs.</li>
-                        <li>View extracted data in the dashboard.</li>
-                        <li>Download extracted data as CSV, XLSX, or DOCX.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Configuration:</strong>
-                    <ul style="margin-top: 5px; margin-bottom: 0;">
-                        <li>For using API key, you can select the respective AI model in either Screener/Extractor.</li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
-
-
-        <div class="highlight-section">
-            <h3>⚡ Usage (run streamlit Locally)</h3>
-            <p style="margin-bottom: 20px; font-size: 17px;">To run ReviewAid locally with your own API keys (OpenAI, DeepSeek, etc.), follow these steps:</p>
-            <ol style="margin-left: 20px; font-size: 16px; line-height: 1.8; color: var(--text-secondary);">
-                <li style="margin-bottom: 15px;">
-                    <strong>Clone the repository</strong><br>
-                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
-                    <code>git clone https://github.com/aurumz-rgb/ReviewAid.git</code><br>
-                    <code>cd ReviewAid</code>
-                    </div>
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Create and activate a virtual environment (recommended)</strong><br>
-                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
-                    <code>python -m venv venv</code><br>
-                    <code>source venv/bin/activate</code> &nbsp; <span style="font-size: 0.85em; color: var(--text-muted);"># macOS / Linux</span><br>
-                    <code>venv\Scripts\activate</code> &nbsp; <span style="font-size: 0.85em; color: var(--text-muted);"># Windows</span>
-                    </div>
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Install dependencies</strong><br>
-                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
-                    <code>pip install -r requirements.txt</code>
-                    </div>
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Start the Streamlit application</strong><br>
-                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
-                    <code>streamlit run app.py</code>
-                    </div>
-                </li>
-                <li style="margin-bottom: 0;">
-                    <strong>Configure AI model along with API key inside the UI</strong>
-                    <ul style="margin-top: 5px;">
-                        <li>Select <strong>AI model</strong> as the provider</li>
-                        <li>Enter your API Key</li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
-
-
-        <div class="highlight-section">
-            <h3>🖥️ Running ReviewAid Locally with Ollama (No API Key Required)</h3>
-            <p style="margin-bottom: 20px;">ReviewAid supports <strong>local inference using Ollama</strong>, allowing you to run the application <strong>without any external API keys</strong>. This is ideal for users who prefer offline usage, enhanced privacy, or full local control.</p>
-            
-            <h4>Prerequisites</h4>
-            <p style="margin-bottom: 10px;">Ensure the following are installed on your system:</p>
-            <ul style="margin-left: 20px; font-size: 16px; color: var(--text-secondary); margin-bottom: 20px;">
-                <li><strong>Python 3.12+</strong></li>
-                <li><strong>Ollama</strong> (installed and running locally)
-                    <ul style="margin-left: 20px; list-style-type: circle;">
-                        <li>Download: <a href="https://ollama.com" target="_blank" style="color: var(--accent-primary);">https://ollama.com</a></li>
-                    </ul>
-                </li>
-                <li>At least one supported Ollama model (e.g., <code>llama3</code>)</li>
-            </ul>
-
-            <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
-                <p style="margin-bottom: 10px;"><strong>Pull a model (example):</strong></p>
-                <code>ollama pull llama3</code>
-                <br><br>
-                <p style="margin-bottom: 0;"><strong>Verify Ollama is running:</strong></p>
-                <code>ollama list</code>
-            </div>
-
-            <h4 style="margin-top: 25px; font-size: 17px;">▶️ Running ReviewAid with Ollama</h4>
-            <ol style="margin-left: 20px; line-height: 1.8; color: var(--text-secondary); margin-top: 15px;">
-                <li style="margin-bottom: 15px;">
-                    <strong>Clone the repository</strong><br>
-                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
-                    <code>git clone https://github.com/aurumz-rgb/ReviewAid.git</code><br>
-                    <code>cd ReviewAid</code>
-                    </div>
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Create and activate a virtual environment (recommended)</strong><br>
-                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
-                    <code>python -m venv venv</code><br>
-                    <code>source venv/bin/activate</code> &nbsp; <span style="font-size: 0.85em; color: var(--text-muted);"># macOS / Linux</span><br>
-                    <code>venv\Scripts\activate</code> &nbsp; <span style="font-size: 0.85em; color: var(--text-muted);"># Windows</span>
-                    </div>
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Install dependencies</strong><br>
-                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
-                    <code>pip install -r requirements.txt</code>
-                    </div>
-                </li>
-                <li style="margin-bottom: 15px;">
-                    <strong>Start the Streamlit application</strong><br>
-                    <div class="highlight-section" style="background: rgba(0,0,0,0.2); padding: 5px;">
-                    <code>streamlit run app.py</code>
-                    </div>
-                </li>
-                <li style="margin-bottom: 20px;">
-                    <strong>Configure Ollama inside the UI</strong>
-                    <ul style="margin-top: 8px;">
-                        <li>Select <strong>Ollama (Local)</strong> as the provider</li>
-                        <li>Choose a local model (e.g., <code>llama3</code>)</li>
-                        <li>No API key is required</li>
-                    </ul>
-                </li>
-            </ol>
-
-            <div class="motivation" style="background: rgba(65, 137, 220, 0.1);">
-                <h3 style="margin-top: 0;">Privacy Advantage</h3>
-                <p style="margin-bottom: 10px;">When using Ollama:</p>
-                <ul style="margin-left: 20px;">
-                    <li>All inference runs <strong>entirely on your local machine</strong></li>
-                    <li>No data is sent to external servers</li>
-                    <li>No API keys are required or stored</li>
-                </ul>
-                <p style="margin-top: 15px; margin-bottom: 0;">This makes Ollama the <strong>most privacy-preserving configuration</strong> supported by ReviewAid.</p>
-            </div>
-
-            <div class="disclaimer-note">
-                <strong>Notes</strong>
-                <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 0;">
-                    <li>Performance depends on your local hardware (CPU/GPU/RAM)</li>
-                    <li>Large PDFs or batch sizes may take longer on CPU-only systems</li>
-                    <li>For best results, ensure Ollama is running before launching Streamlit</li>
-                </ul>
-            </div>
-        </div>
-
-      </div>
-
-
-      
  
       <div class="section reveal">
         <h2>Configuration</h2>
         <div class="acknowledgement-content">
           <div class="logo-row">
-            <img src="assets/openai.png" alt="OpenAI Logo" class="ack-img">
-            <img src="assets/anthropic.png" alt="Anthropic Logo" class="ack-img">
-            <img src="assets/deepseek.png" alt="DeepSeek Logo" class="ack-img">
-            <img src="assets/cohere1.png" alt="Cohere Logo" class="ack-img">
-            <img src="assets/zai.png" alt="GLMV Logo" class="ack-img">
-            <img src="assets/ollama.png" alt="Ollama Logo" class="ack-img">
+<img src="assets/openai.png" alt="ReviewAid supports OpenAI GPT-4o for systematic review screening" class="ack-img">
+<img src="assets/anthropic.png" alt="ReviewAid supports Anthropic Claude for AI data extraction" class="ack-img">
+<img src="assets/deepseek.png" alt="ReviewAid supports DeepSeek for PICO screening" class="ack-img">
+<img src="assets/cohere1.png" alt="ReviewAid supports Cohere for systematic review automation" class="ack-img">
+<img src="assets/zai.png" alt="ReviewAid default AI model Z.ai GLM-4.6V-Flash" class="ack-img">
+<img src="assets/ollama.png" alt="ReviewAid supports Ollama for offline local systematic review screening" class="ack-img">
           </div>
 
           <div class="ack-text">
@@ -1361,17 +299,15 @@
       </div>
 
 
-      
-
       <div class="section acknowledgements-section reveal">
         <h2>Acknowledgements</h2>
         <div class="acknowledgement-content">
-          <img src="assets/GLMV.png" alt="ZAI GLM-4.6V-Flash Logo" class="ack-img">
+          <img src="assets/GLMV.png" alt="ReviewAid powered by Z.ai GLM-4.6V-Flash AI model for systematic reviews" class="ack-img">
           <div class="ack-text">
             <p>I gratefully acknowledge developers of <strong>GLM-4.6V-Flash (Z.ai)</strong> for providing the AI model used in ReviewAid.</p>
             <p>The visual and text-based reasoning capabilities of GLM-4.6V-Flash have greatly enhanced ReviewAid's full-text screening and data extraction workflows.</p>
             <p>For more information, please see <a href="https://arxiv.org/abs/2507.01006" target="_blank" class="interactive-link">GLM-4.6V-Flash paper</a> and <a href="https://huggingface.co/zai-org/GLM-4.6V-Flash" target="_blank" class="interactive-link">GLM-4.6V-Flash Hugging Face</a>.</p>
-            <p>I would also like to thank <strong>Mohith Balakrishnan</strong>  for his thorough validation of ReviewAid, including batch testing, error checks, and confidence verification, which significantly improved the tool’s reliability and accuracy.</p>
+            <p>I would also like to thank <strong>Mohith Balakrishnan</strong>  for his thorough validation of ReviewAid, including batch testing, error checks, and confidence verification, which significantly improved the tool's reliability and accuracy.</p>
           </div>
         </div>
       </div>
@@ -1408,7 +344,7 @@
 
 
     </div>
-  </div>
+  </main>
 
 
   <footer>
@@ -1426,144 +362,7 @@
   </footer>
 
 
-  <script>
-    
-    window.addEventListener('scroll', reveal);
-
-    function reveal(){
-        var reveals = document.querySelectorAll('.reveal');
-
-        for(var i = 0; i < reveals.length; i++){
-
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
-
-            if(elementTop < windowHeight - elementVisible){
-                reveals[i].classList.add('active');
-            }
-        }
-    }
-
-    reveal();
-
-
-    const videos = document.querySelectorAll('.preview-video');
-    videos.forEach(video => {
-        video.playbackRate = 2.0;
-    });
-
-    
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const body = document.body;
-    
-
-    const currentTheme = localStorage.getItem('theme');
-    
-    if (currentTheme === 'dark') {
-        body.classList.add('dark-mode');
-    }
-
-    themeToggleBtn.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-        
-        let theme = 'light';
-        if (body.classList.contains('dark-mode')) {
-            theme = 'dark';
-        }
-        
-        localStorage.setItem('theme', theme);
-    });
-
-  
-        const citations = {
-        "APA": "Sahu, V. and Balakrishnan, M. (2026) ‘ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews’, Journal of Open Research Software, 14(1), p. 21. Available at: https://doi.org/10.5334/jors.672",
-        "Harvard": "Sahu, V. and Balakrishnan, M., 2026. ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews. Journal of Open Research Software, 14(1), p. 21. Available at: https://doi.org/10.5334/jors.672",
-        "MLA": "Sahu, Vihaan, and Mohith Balakrishnan. \"ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews.\" Journal of Open Research Software, vol. 14, no. 1, 2026, p. 21, https://doi.org/10.5334/jors.672.",
-        "Chicago": "Sahu, Vihaan, and Mohith Balakrishnan. 2026. \"ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews.\" Journal of Open Research Software 14 (1): 21. https://doi.org/10.5334/jors.672.",
-        "IEEE": "V. Sahu and M. Balakrishnan, \"ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews,\" Journal of Open Research Software, vol. 14, no. 1, p. 21, 2026. doi: 10.5334/jors.672.",
-        "Vancouver": "Sahu V, Balakrishnan M. ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews. Journal of Open Research Software. 2026;14(1):21."
-    };
-
-    const risData = `TY  - JOUR
-AU  - Sahu, V.
-AU  - Balakrishnan, M.
-TI  - ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews
-JO  - Journal of Open Research Software
-PY  - 2026
-VL  - 14
-IS  - 1
-SP  - 21
-DO  - 10.5334/jors.672
-ER  -`;
-
-    const bibData = `@article{Sahu2026,
-  author={Sahu, V. and Balakrishnan, M.},
-  title={ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews},
-  journal={Journal of Open Research Software},
-  year={2026},
-  volume={14},
-  number={1},
-  pages={21},
-  doi={10.5334/jors.672}
-}`;
-
-    const styleSelector = document.getElementById('citation-style');
-    const displayBox = document.getElementById('citation-display');
-    const copyBtn = document.getElementById('copy-citation-btn');
-    const risBtn = document.getElementById('download-ris-btn');
-    const bibBtn = document.getElementById('download-bib-btn');
-
-    function updateDisplay() {
-        displayBox.textContent = citations[styleSelector.value];
-    }
-
-    function downloadFile(filename, content) {
-        const blob = new Blob([content], { type: 'text/plain' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-    }
-
-
-    if(styleSelector) {
-        updateDisplay();
-        styleSelector.addEventListener('change', updateDisplay);
-    }
-
-    if(copyBtn) {
-        copyBtn.addEventListener('click', () => {
-            const textToCopy = displayBox.textContent;
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                const originalText = copyBtn.innerText;
-                copyBtn.innerText = "Copied!";
-                setTimeout(() => {
-                    copyBtn.innerText = originalText;
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-            });
-        });
-    }
-
-   
-    if(risBtn) {
-        risBtn.addEventListener('click', () => {
-            downloadFile("ReviewAid_citation.ris", risData);
-        });
-    }
-
-    if(bibBtn) {
-        bibBtn.addEventListener('click', () => {
-            downloadFile("ReviewAid_citation.bib", bibData);
-        });
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
