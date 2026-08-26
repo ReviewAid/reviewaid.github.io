@@ -5,14 +5,14 @@
  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReviewAid - Free AI Systematic Review Screener & Data Extractor</title>
-<meta name="description" content="Free AI-powered systematic review tool. Automate full-text PICO screening and custom data extraction from PDFs — no installation needed. Export to CSV, Excel, and Word.">
+  <title>ReviewAid - Free AI Systematic Review Tool / Full-Text PICO Screening & Data Extraction</title>
+<meta name="description" content="Free open-source AI systematic review tool: automate full-text PICO screening & custom data extraction from PDFs. Multi-LLM (GPT-4o, Claude, GLM). Export CSV/Excel/Word.">
   <meta name="keywords" content="systematic review screening tool, AI data extraction, PICO screening, full-text screening, systematic review automation, literature review AI, research paper screener, data extraction tool, evidence synthesis, AI systematic review">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="author" content="Vihaan Sahu">
   <meta name="copyright" content="© 2025 Vihaan Sahu">
   <meta name="language" content="en">
-  <link rel="canonical" href="https://reviewaid.github.io">
+  <link rel="canonical" href="https://reviewaid.github.io/">
   <link rel="icon" href="favicon.ico" type="image/png">
   
   <meta name="theme-color" content="#1f2937">
@@ -38,17 +38,18 @@
   <meta name="twitter:description" content="Free AI-powered systematic review tool. Automate full-text PICO screening and custom data extraction from PDFs — no installation needed. Export to CSV, Excel, and Word.">
   <meta name="twitter:image" content="https://reviewaid.github.io/assets/RA_banner1.png">
   <meta name="twitter:image:alt" content="ReviewAid Banner">
-  <meta name="twitter:creator" content="@Vihaan">
+
+    <meta name="citation_title" content="ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews">
+<meta name="citation_author" content="Sahu, V. and Balakrishnan, M.">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_doi" content="10.5334/jors.672">
 
   <meta name="citation_title" content="ReviewAid: AI-Driven Full-Text Screening and Data Extraction for Systematic Reviews and Evidence Synthesis">
   <meta name="citation_author" content="Vihaan Sahu">
   <meta name="citation_publication_date" content="2025">
   <meta name="citation_doi" content="10.5281/zenodo.18060972"> 
 
-  <meta name="citation_title" content="ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews">
-<meta name="citation_author" content="Sahu, V. and Balakrishnan, M.">
-<meta name="citation_publication_date" content="2026">
-<meta name="citation_doi" content="10.5334/jors.672">
+
 
   <script type="application/ld+json">
   {
@@ -98,6 +99,29 @@
   }
   </script>
 
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ReviewAid Data Extractor Demo",
+    "description": "Watch ReviewAid AI extract custom data fields from research PDFs automatically.",
+    "thumbnailUrl": "https://reviewaid.github.io/screenshots/screenshot1.png",
+    "uploadDate": "2026-03-01",
+    "contentUrl": "https://reviewaid.github.io/Extractor.mp4"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "ReviewAid Full-Text PICO Screener Demo",
+    "description": "Watch ReviewAid AI screen full-text PDFs against PICO inclusion/exclusion criteria.",
+    "thumbnailUrl": "https://reviewaid.github.io/screenshots/screenshot2.png",
+    "uploadDate": "2026-03-01",
+    "contentUrl": "https://reviewaid.github.io/Screener.mp4"
+  }
+  </script>
+  
   <link rel="stylesheet" href="styles.css">
 
     <script type="application/ld+json">
@@ -216,8 +240,69 @@
       </div>
 
 
+      <div class="section reveal">
+        <h2>ReviewAid vs. Other Systematic Review Tools</h2>
+        <p>ReviewAid uniquely combines full-text AI screening, customizable extraction, multi-provider LLM configuration, explicit confidence scoring, and local inference in one open-source tool.</p>
+        <div class="table-responsive">
+          <table class="confidence-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>ReviewAid</th>
+                <th>Rayyan</th>
+                <th>Covidence</th>
+                <th>ASReview</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>AI Full-text PDF Screening</strong></td>
+                <td>✅ Yes</td>
+                <td>⚠️ AI-assisted</td>
+                <td>⚠️ AI-assisted</td>
+                <td>❌ Primarily title/abstract</td>
+              </tr>
+              <tr>
+                <td><strong>Custom AI Data Extraction</strong></td>
+                <td>✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>✅ Yes</td>
+                <td>❌ No</td>
+              </tr>
+              <tr>
+                <td><strong>Multi-LLM Support</strong></td>
+                <td>✅ Yes</td>
+                <td>❌ No</td>
+                <td>❌ No</td>
+                <td>❌ No</td>
+              </tr>
+              <tr>
+                <td><strong>Explicit Confidence Scoring</strong></td>
+                <td>✅ Yes</td>
+                <td>❌ No equivalent system</td>
+                <td>❌ No equivalent system</td>
+                <td>❌ No equivalent system</td>
+              </tr>
+              <tr>
+                <td><strong>Local / Offline AI</strong></td>
+                <td>✅ Yes</td>
+                <td>❌ No</td>
+                <td>❌ No</td>
+                <td>✅ Yes</td>
+              </tr>
+              <tr>
+                <td><strong>Free & Open Source</strong></td>
+                <td>✅ Apache 2.0</td>
+                <td>⚠️ Free tier / proprietary</td>
+                <td>❌ Proprietary</td>
+                <td>✅ MIT</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-
+      
       <div class="highlight-section reveal">
         <h2>Key Features</h2>
         <div class="tools">
