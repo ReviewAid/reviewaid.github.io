@@ -363,39 +363,33 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>1.0 (100%)</strong></td>
-                            <td><span class="confidence-badge" style="background:#dcfce7; color:#166534;">Definitive Match</span></td>
-                            <td>Deterministic rule-based classification / No ambiguity.</td>
-                            <td>Fully automated decision</td>
-                        </tr>
-                        <tr>
-                            <td><strong>0.8 – 1.0</strong></td>
-                            <td><span class="confidence-badge" style="background:#dbeafe; color:#1e40af;">Very High</span></td>
-                            <td>AI strongly validates the decision using explicit textual evidence.</td>
+                            <td><strong>0.9 – 1.0</strong></td>
+                            <td><span class="confidence-badge" style="background:#dcfce7; color:#166534;">Deterministic Match</span></td>
+                            <td>Extracted data was verified via exact string match or near-perfect token overlap against the source text.</td>
                             <td>Safe to accept</td>
                         </tr>
                         <tr>
-                            <td><strong>0.6 – 0.79</strong></td>
-                            <td><span class="confidence-badge" style="background:#e0f2fe; color:#075985;">High</span></td>
-                            <td>Criteria appear satisfied based on standard academic structure and content.</td>
+                            <td><strong>0.6 – 0.89</strong></td>
+                            <td><span class="confidence-badge" style="background:#dbeafe; color:#1e40af;">High Confidence</span></td>
+                            <td>AI output verified via strong semantic token overlap. Paraphrasing detected and grounded in source.</td>
                             <td>Review optional</td>
                         </tr>
                         <tr>
                             <td><strong>0.4 – 0.59</strong></td>
-                            <td><span class="confidence-badge" style="background:#ffedd5; color:#9a3412;">Moderate</span></td>
-                            <td>Ambiguous context or loosely met criteria.</td>
+                            <td><span class="confidence-badge" style="background:#ffedd5; color:#9a3412;">Moderate Confidence</span></td>
+                            <td>Partial overlap detected. Ambiguous context or loosely met criteria.</td>
                             <td>Manual verification recommended</td>
                         </tr>
                         <tr>
                             <td><strong>0.1 – 0.39</strong></td>
-                            <td><span class="confidence-badge" style="background:#fee2e2; color:#991b1b;">Low</span></td>
-                            <td>Based mainly on heuristic keyword estimation.</td>
+                            <td><span class="confidence-badge" style="background:#fee2e2; color:#991b1b;">Low Confidence</span></td>
+                            <td>Poor textual overlap or negation detected. AI score overridden by Tier 1 math due to likely hallucination.</td>
                             <td>High risk of error</td>
                         </tr>
                         <tr>
                             <td><strong>&lt; 0.1</strong></td>
                             <td><span class="confidence-badge" style="background:#f3f4f6; color:#374151;">Unreliable</span></td>
-                            <td>Derived from fallback or failed extraction methods.</td>
+                            <td>Derived from fallback or failed extraction methods. Complete lack of text grounding.</td>
                             <td>Mandatory manual review</td>
                         </tr>
                     </tbody>
