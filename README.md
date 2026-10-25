@@ -6,7 +6,7 @@
 
 **Conference Presentation (Zenodo DOI):** [10.5281/zenodo.23018090](https://doi.org/10.5281/zenodo.23018090) – FORRT AI in Metascience, September 2026
 
-**ReviewAid** is an AI-powered Research article full-text Screener and Extractor designed to streamline the systematic review process. Upload research papers, automatically screen for relevance, extract key data fields, and accelerate your literature review workflow — all in one intuitive, easy-to-use web tool.
+**ReviewAid** is an AI-powered Research article full-text Screener and Extractor designed to streamline the systematic review process. Upload research papers, automatically screen for relevance, extract key data fields, and accelerate your literature review workflow - all in one intuitive, easy-to-use web tool.
 
 ---
 
