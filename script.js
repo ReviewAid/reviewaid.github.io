@@ -48,12 +48,12 @@
 
   
         const citations = {
-        "APA": "Sahu, V. and Balakrishnan, M. (2026) 'ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews', Journal of Open Research Software, 14(1), p. 21. Available at: https://doi.org/10.5334/jors.672",
-        "Harvard": "Sahu, V. and Balakrishnan, M., 2026. ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews. Journal of Open Research Software, 14(1), p. 21. Available at: https://doi.org/10.5334/jors.672",
-        "MLA": "Sahu, Vihaan, and Mohith Balakrishnan. \"ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews.\" Journal of Open Research Software, vol. 14, no. 1, 2026, p. 21, https://doi.org/10.5334/jors.672.",
-        "Chicago": "Sahu, Vihaan, and Mohith Balakrishnan. 2026. \"ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews.\" Journal of Open Research Software 14 (1): 21. https://doi.org/10.5334/jors.672.",
-        "IEEE": "V. Sahu and M. Balakrishnan, \"ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews,\" Journal of Open Research Software, vol. 14, no. 1, p. 21, 2026. doi: 10.5334/jors.672.",
-        "Vancouver": "Sahu V, Balakrishnan M. ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews. Journal of Open Research Software. 2026;14(1):21."
+        "APA": "Sahu, V. and Balakrishnan, M. (2026) 'ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews', Journal of Open Research Software, 14(1), p. 21. Available at: https://doi.org/10.5334/jors.672 | Sahu, V. (2026) 'ReviewAid: confidence-scored, locally runnable LLM screening and extraction.' Presented at the FORRT AI in Metascience conference. https://doi.org/10.5281/zenodo.23018090",
+        "Harvard": "Sahu, V. and Balakrishnan, M., 2026. ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews. Journal of Open Research Software, 14(1), p. 21. Available at: https://doi.org/10.5334/jors.672 | Sahu, V., 2026. 'ReviewAid: confidence-scored, locally runnable LLM screening and extraction.' Presented at the FORRT AI in Metascience conference. Available at: https://doi.org/10.5281/zenodo.23018090",
+        "MLA": "Sahu, Vihaan, and Mohith Balakrishnan. \"ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews.\" Journal of Open Research Software, vol. 14, no. 1, 2026, p. 21, https://doi.org/10.5334/jors.672. | Sahu, Vihaan. \"ReviewAid: confidence-scored, locally runnable LLM screening and extraction.\" FORRT AI in Metascience, 2026, https://doi.org/10.5281/zenodo.23018090.",
+        "Chicago": "Sahu, Vihaan, and Mohith Balakrishnan. 2026. \"ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews.\" Journal of Open Research Software 14 (1): 21. https://doi.org/10.5334/jors.672. | Sahu, Vihaan. 2026. \"ReviewAid: confidence-scored, locally runnable LLM screening and extraction.\" Paper presented at the FORRT AI in Metascience conference. https://doi.org/10.5281/zenodo.23018090.",
+        "IEEE": "V. Sahu and M. Balakrishnan, \"ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews,\" Journal of Open Research Software, vol. 14, no. 1, p. 21, 2026. doi: 10.5334/jors.672. | V. Sahu, \"ReviewAid: confidence-scored, locally runnable LLM screening and extraction,\" presented at the FORRT AI in Metascience Conf., Sep. 2026. doi: 10.5281/zenodo.23018090.",
+        "Vancouver": "Sahu V, Balakrishnan M. ReviewAid: An Open-Source Tool for Efficient PICO-Based Screening and Data Extraction in Systematic Reviews. Journal of Open Research Software. 2026;14(1):21. doi:10.5334/jors.672 | Sahu V. ReviewAid: confidence-scored, locally runnable LLM screening and extraction. Presented at the FORRT AI in Metascience conference; September 2026. doi:10.5281/zenodo.23018090."
     };
 
     const risData = `TY  - JOUR
@@ -66,6 +66,13 @@ VL  - 14
 IS  - 1
 SP  - 21
 DO  - 10.5334/jors.672
+ER  -
+TY  - CONF
+AU  - Sahu, V.
+TI  - ReviewAid: confidence-scored, locally runnable LLM screening and extraction
+T2  - FORRT AI in Metascience
+PY  - 2026
+DO  - 10.5281/zenodo.23018090
 ER  -`;
 
     const bibData = `@article{Sahu2026,
@@ -77,6 +84,14 @@ ER  -`;
   number={1},
   pages={21},
   doi={10.5334/jors.672}
+}
+
+@misc{Sahu2026presentation,
+  author={Sahu, V.},
+  title={ReviewAid: confidence-scored, locally runnable LLM screening and extraction},
+  howpublished={FORRT AI in Metascience},
+  year={2026},
+  doi={10.5281/zenodo.23018090}
 }`;
 
     const styleSelector = document.getElementById('citation-style');
